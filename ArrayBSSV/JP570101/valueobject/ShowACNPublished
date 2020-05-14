@@ -1,0 +1,88 @@
+package oracle.e1.bssv.JP570101.valueobject;
+
+import java.io.Serializable;
+
+import oracle.e1.bssv.J570101.valueobject.InternalGetACN;
+import oracle.e1.bssv.J570101.valueobject.ShowACN;
+//import oracle.e1.bssv.J574901.valueobject.InternalAddF55PSH01;
+//import oracle.e1.bssv.J574901.valueobject.ShowF55PSH01;
+//import oracle.e1.bssv.JP574901.valueobject.AddF55PSH01Output;
+//import oracle.e1.bssv.JP574901.valueobject.PublishedShowF55PSH01;
+import oracle.e1.bssvfoundation.base.MessageValueObject;
+import oracle.e1.bssvfoundation.base.ValueObject;
+
+/**
+ * TODO: Java Doc comments for Value Object here
+ */
+public class ShowACNPublished extends MessageValueObject implements Serializable {
+    /**
+     * TODO: Default public constructor for instantiating: ShowACNPublished
+     */
+    private ACNOutput_Published[] Output = null;
+    public ShowACNPublished() {
+    }
+    public ShowACNPublished(ShowACN InternalVO) {
+        
+        if (InternalVO.getShowInternalACN() != null) {
+            
+            ACNOutput_Published showOutputs[] =  new ACNOutput_Published[InternalVO.getShowInternalACN().size()];
+            for (int countICCodes = 0; countICCodes < InternalVO.getShowInternalACN().size(); countICCodes++) {
+                
+                 InternalGetACN internalVO = InternalVO.getShowInternalACN(countICCodes);
+                ACNOutput_Published showOutput = new ACNOutput_Published();
+                //showOutput.setF55PSH01(internalICCodeVO.getSzICCode());
+                showOutput.setAddressLine1(internalVO.getSTRAS());
+                showOutput.setCity(internalVO.getORT01());
+                showOutput.setState(internalVO.getREGIO());
+                showOutput.setPostalCode(internalVO.getPSLTZ());
+                showOutput.setCounty(internalVO.getORT02());
+                showOutput.setCountry(internalVO.getLAND1());
+                showOutput.setTaxIDAdditionalIndividual(internalVO.getTXJCD());
+                showOutput.setSearchType(internalVO.getCUST_REC_T());
+                showOutput.setAddressNumber(internalVO.getCUST_ACN());
+                showOutput.setAddressLine2(internalVO.getLGY_NAME2());
+                showOutput.setDescription(internalVO.getTYPE_CUST());
+                showOutput.setAddressNumber5th(internalVO.getTRUE_ACN());
+                showOutput.setUserReservedAmount(internalVO.getST_TWN_NBR());
+                showOutput.setPartnerAddressNumber(internalVO.getWHL_SVN_ID());
+                showOutput.setOCKanbanCardNo(internalVO.getWHL_MKT_ID());
+                // showOutput.setCategoryCodeAddressBook01(InternalVO.getHDQTRS());
+                showOutput.setPartnerAddressNumber1(internalVO.getFTN_SVN_ID());
+                showOutput.setOCKanbanCardNo1(internalVO.getFTN_WHL_ID());
+                showOutput.setAddressNumber1st(internalVO.getHDQTRS());
+                showOutput.setBusinessUnit(internalVO.getEXP_DEPT());
+                showOutput.setCategoryCodeAddressBook13(internalVO.getCONCESS_NO());
+                showOutput.setAddressNumber2nd(internalVO.getCHAIN());
+                showOutput.setUserReservedNumber(internalVO.getFTN_GEO_ID());
+                showOutput.setUserReservedNumber(internalVO.getWHL_SVN_ID());
+                showOutput.setCategoryCodeAddressBook12(internalVO.getFTN_FRAN());
+                showOutput.setPhonePrefix(internalVO.getPH_AREA_CD());
+                showOutput.setPhoneNumber(internalVO.getPH_LIN_NBR());
+                showOutput.setUserReservedCode1(internalVO.getURCD());
+                showOutput.setUserReservedReference1(internalVO.getURRF());
+                showOutput.setUserReservedAmount1(internalVO.getURAT());
+                showOutput.setUserReservedDate1(internalVO.getURDT());
+                showOutput.setUserReservedNumber1(internalVO.getURAB());
+                    showOutputs[countICCodes] = showOutput;
+                }
+            this.setOutput(showOutputs);
+        }
+        
+    }
+    public void setOutput(ACNOutput_Published[] Output) {
+        this.Output = Output;
+    }
+    
+    public void setOutput(ACNOutput_Published Output, int i) 
+                                                        
+                                                        {        this.Output[i] = Output;
+    }
+
+    public ACNOutput_Published[] getOutput() {
+        return Output;
+    }
+    
+    public ACNOutput_Published getOutput(int i) {
+        return Output[i];
+    }  
+}
