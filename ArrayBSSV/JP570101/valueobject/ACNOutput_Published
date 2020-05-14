@@ -1,0 +1,865 @@
+package oracle.e1.bssv.JP570101.valueobject;
+
+import java.io.Serializable;
+import oracle.e1.bssvfoundation.util.MathNumeric;
+import java.util.Date;
+import java.math.BigDecimal;
+
+import java.util.Calendar;
+
+//import java.util.Date;
+import oracle.e1.bssv.J570101.valueobject.InternalGetACN;
+import oracle.e1.bssvfoundation.base.MessageValueObject;
+import oracle.e1.bssvfoundation.base.ValueObject;
+import oracle.e1.bssvfoundation.util.E1MessageList;
+
+/**
+ * TODO: Java Doc comments for Value Object here
+ */
+public class ACNOutput_Published extends MessageValueObject implements Serializable {
+    /**
+     * J.D. EnterpriseOne Event Point 01
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: EV01 <br>
+     * EnterpriseOne field length:  1 <br>
+     */
+    private String jDEnterpriseOneEventPoint01 = null;
+
+    /**
+     * Tax ID
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: TAX <br>
+     * EnterpriseOne field length:  20 <br>
+     */
+    private String taxID = null;
+
+    /**
+     * Name
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: NAME <br>
+     * EnterpriseOne field length:  30 <br>
+     */
+    private String name = null;
+
+    /**
+     * User Reserved Reference
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URRF <br>
+     * EnterpriseOne field length:  15 <br>
+     */
+    private String userReservedReference = null;
+
+    /**
+     * Address Line 1
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: ADD1 <br>
+     * EnterpriseOne field length:  40 <br>
+     */
+    private String addressLine1 = null;
+
+    /**
+     * City
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: CTY1 <br>
+     * EnterpriseOne field length:  25 <br>
+     */
+    private String city = null;
+
+    /**
+     * State
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: ADDS <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String state = null;
+
+    /**
+     * Postal Code
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: ADDZ <br>
+     * EnterpriseOne field length:  12 <br>
+     */
+    private String postalCode = null;
+
+    /**
+     * County
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: COUN <br>
+     * EnterpriseOne field length:  25 <br>
+     */
+    private String county = null;
+
+    /**
+     * Country
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: CTR <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String country = null;
+
+    /**
+     * Tax ID - Additional - Individual
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: TX2 <br>
+     * EnterpriseOne field length:  20 <br>
+     */
+    private String taxIDAdditionalIndividual = null;
+
+    /**
+     * Search Type
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AT1 <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String searchType = null;
+
+    /**
+     * Address Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AN8 <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal addressNumber = null;
+
+    /**
+     * Address Line 2
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: ADD2 <br>
+     * EnterpriseOne field length:  40 <br>
+     */
+    private String addressLine2 = null;
+
+    /**
+     * Description
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: DL01 <br>
+     * EnterpriseOne field length:  30 <br>
+     */
+    private String description = null;
+
+    /**
+     * Address Number - 5th
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AN86 <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal addressNumber5th = null;
+
+    /**
+     * User Reserved Date
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URDT <br>
+     * EnterpriseOne field length:  6 <br>
+     */
+    private Date userReservedDate = null;
+
+    /**
+     * User Reserved Amount
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URAT <br>
+     * EnterpriseOne field length:  15 <br>
+     * EnterpriseOne decimal places: 2 <br>
+     */
+    private BigDecimal userReservedAmount = null;
+
+    /**
+     * Partner Address Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: PRAN8 <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal partnerAddressNumber = null;
+
+    /**
+     * OC Kanban Card No
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: OCCARDNO <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal oCKanbanCardNo = null;
+
+    /**
+     * Category Code - Address Book 01
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AC01 <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String categoryCodeAddressBook01 = null;
+
+    /**
+     * Partner Address Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: PRAN8 <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal partnerAddressNumber1= null;
+
+    /**
+     * OC Kanban Card No
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: OCCARDNO <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal oCKanbanCardNo1 = null;
+
+    /**
+     * Address Number - 1st
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AN81 <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal addressNumber1st = null;
+
+    /**
+     * Business Unit
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: MCU <br>
+     * EnterpriseOne field length:  12 <br>
+     */
+    private String businessUnit = null;
+
+    /**
+     * Category Code - Address Book 13
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AC13 <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String categoryCodeAddressBook13 = null;
+
+    /**
+     * Address Number - 2nd
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AN82 <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal addressNumber2nd = null;
+
+    /**
+     * User Reserved Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URAB <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal userReservedNumber = null;
+
+    /**
+     * Sales Region
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AC11 <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String salesRegion = null;
+
+    /**
+     * Category Code - Address Book 12
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AC12 <br>
+     * EnterpriseOne field length:  3 <br>
+     */
+    private String categoryCodeAddressBook12 = null;
+
+    /**
+     * Phone Prefix
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: AR1 <br>
+     * EnterpriseOne field length:  6 <br>
+     */
+    private String phonePrefix = null;
+
+    /**
+     * Phone Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: PH1 <br>
+     * EnterpriseOne field length:  20 <br>
+     */
+    private String phoneNumber = null;
+
+    /**
+     * Phone Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: PH1 <br>
+     * EnterpriseOne field length:  20 <br>
+     */
+    private String phoneNumber_XTN = null;
+
+    /**
+     * User Reserved Code
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URCD <br>
+     * EnterpriseOne field length:  2 <br>
+     */
+    private String userReservedCode1 = null;
+
+    /**
+     * User Reserved Reference
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URRF <br>
+     * EnterpriseOne field length:  15 <br>
+     */
+    private String userReservedReference1 = null;
+
+    /**
+     * User Reserved Amount
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URAT <br>
+     * EnterpriseOne field length:  15 <br>
+     * EnterpriseOne decimal places: 2 <br>
+     */
+    private BigDecimal userReservedAmount1 = null;
+
+    public void setJDEnterpriseOneEventPoint01(String jDEnterpriseOneEventPoint01) {
+        this.jDEnterpriseOneEventPoint01 = jDEnterpriseOneEventPoint01;
+    }
+
+    public String getJDEnterpriseOneEventPoint01() {
+        return jDEnterpriseOneEventPoint01;
+    }
+
+    public void setTaxID(String taxID) {
+        this.taxID = taxID;
+    }
+
+    public String getTaxID() {
+        return taxID;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setUserReservedReference(String userReservedReference) {
+        this.userReservedReference = userReservedReference;
+    }
+
+    public String getUserReservedReference() {
+        return userReservedReference;
+    }
+
+    public void setAddressLine1(String addressLine1) {
+        this.addressLine1 = addressLine1;
+    }
+
+    public String getAddressLine1() {
+        return addressLine1;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
+    public String getCounty() {
+        return county;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setTaxIDAdditionalIndividual(String taxIDAdditionalIndividual) {
+        this.taxIDAdditionalIndividual = taxIDAdditionalIndividual;
+    }
+
+    public String getTaxIDAdditionalIndividual() {
+        return taxIDAdditionalIndividual;
+    }
+
+    public void setSearchType(String searchType) {
+        this.searchType = searchType;
+    }
+
+    public String getSearchType() {
+        return searchType;
+    }
+
+    public void setAddressNumber(BigDecimal addressNumber) {
+        this.addressNumber = addressNumber;
+    }
+    public void setAddressNumber(MathNumeric addressNumber) {
+        if(addressNumber!=null)
+            setAddressNumber(addressNumber.asBigDecimal());
+        else
+             setAddressNumber((BigDecimal) null);      
+            }
+    public BigDecimal getAddressNumber() {
+        return addressNumber;
+    }
+
+    public void setAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
+    }
+
+    public String getAddressLine2() {
+        return addressLine2;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setAddressNumber5th(BigDecimal addressNumber5th) {
+        this.addressNumber5th = addressNumber5th;
+    }
+    public void setAddressNumber5th(MathNumeric addressNumber5th) {
+        if(addressNumber5th!=null)
+            setAddressNumber5th(addressNumber5th.asBigDecimal());
+        else
+             setAddressNumber5th((BigDecimal) null);      
+            }
+
+    public BigDecimal getAddressNumber5th() {
+        return addressNumber5th;
+    }
+
+    public void setUserReservedDate(Date userReservedDate) {
+        this.userReservedDate = userReservedDate;
+    }
+
+    public Date getUserReservedDate() {
+        return userReservedDate;
+    }
+
+    public void setUserReservedAmount(BigDecimal userReservedAmount) {
+        this.userReservedAmount = userReservedAmount;
+    }
+    public void setUserReservedAmount(MathNumeric userReservedAmount) {
+        if(userReservedAmount!=null)
+            setUserReservedAmount(userReservedAmount.asBigDecimal());
+        else
+             setUserReservedAmount((BigDecimal) null);      
+            }
+    public BigDecimal getUserReservedAmount() {
+        return userReservedAmount;
+    }
+
+    public void setPartnerAddressNumber(BigDecimal partnerAddressNumber) {
+        this.partnerAddressNumber = partnerAddressNumber;
+    }
+    public void setPartnerAddressNumber(MathNumeric partnerAddressNumber) {
+        if(partnerAddressNumber!=null)
+            setPartnerAddressNumber(partnerAddressNumber.asBigDecimal());
+        else
+             setPartnerAddressNumber((BigDecimal) null);      
+            }
+    public BigDecimal getPartnerAddressNumber() {
+        return partnerAddressNumber;
+    }
+
+    public void setOCKanbanCardNo(BigDecimal oCKanbanCardNo) {
+        this.oCKanbanCardNo = oCKanbanCardNo;
+    }
+    public void setOCKanbanCardNo(MathNumeric oCKanbanCardNo) {
+        if(oCKanbanCardNo!=null)
+            setOCKanbanCardNo(oCKanbanCardNo.asBigDecimal());
+        else
+             setOCKanbanCardNo((BigDecimal) null);      
+            }
+    public BigDecimal getOCKanbanCardNo() {
+        return oCKanbanCardNo;
+    }
+
+    public void setCategoryCodeAddressBook01(String categoryCodeAddressBook01) {
+        this.categoryCodeAddressBook01 = categoryCodeAddressBook01;
+    }
+
+    public String getCategoryCodeAddressBook01() {
+        return categoryCodeAddressBook01;
+    }
+
+    public void setPartnerAddressNumber1(BigDecimal partnerAddressNumber1) {
+        this.partnerAddressNumber1 = partnerAddressNumber1;
+    }
+    public void setPartnerAddressNumber1(MathNumeric partnerAddressNumber1) {
+        if(partnerAddressNumber1!=null)
+            setPartnerAddressNumber1(partnerAddressNumber1.asBigDecimal());
+        else
+             setPartnerAddressNumber1((BigDecimal) null);      
+            }
+    public BigDecimal getPartnerAddressNumber1() {
+        return partnerAddressNumber1;
+    }
+
+    public void setOCKanbanCardNo1(BigDecimal oCKanbanCardNo1) {
+        this.oCKanbanCardNo1 = oCKanbanCardNo1;
+    }
+    
+    public void setOCKanbanCardNo1(MathNumeric oCKanbanCardNo1) {
+        if(oCKanbanCardNo1!=null)
+            setOCKanbanCardNo1(oCKanbanCardNo1.asBigDecimal());
+        else
+             setOCKanbanCardNo1((BigDecimal) null);      
+            }
+
+    public BigDecimal getOCKanbanCardNo1() {
+        return oCKanbanCardNo1;
+    }
+
+    public void setAddressNumber1st(BigDecimal addressNumber1st) {
+        this.addressNumber1st = addressNumber1st;
+    }
+    public void setAddressNumber1st(MathNumeric addressNumber1st) {
+        if(addressNumber1st!=null)
+            setAddressNumber1st(addressNumber1st.asBigDecimal());
+        else
+             setAddressNumber1st((BigDecimal) null);      
+            }
+    public BigDecimal getAddressNumber1st() {
+        return addressNumber1st;
+    }
+
+    public void setBusinessUnit(String businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
+    public String getBusinessUnit() {
+        return businessUnit;
+    }
+
+    public void setCategoryCodeAddressBook13(String categoryCodeAddressBook13) {
+        this.categoryCodeAddressBook13 = categoryCodeAddressBook13;
+    }
+
+    public String getCategoryCodeAddressBook13() {
+        return categoryCodeAddressBook13;
+    }
+
+    public void setAddressNumber2nd(BigDecimal addressNumber2nd) {
+        this.addressNumber2nd = addressNumber2nd;
+    }
+    public void setAddressNumber2nd(MathNumeric addressNumber2nd) {
+        if(addressNumber5th!=null)
+            setAddressNumber2nd(addressNumber2nd.asBigDecimal());
+        else
+             setAddressNumber2nd((BigDecimal) null);      
+            }
+    public BigDecimal getAddressNumber2nd() {
+        return addressNumber2nd;
+    }
+
+    public void setUserReservedNumber(BigDecimal userReservedNumber) {
+        this.userReservedNumber = userReservedNumber;
+    }
+    public void setUserReservedNumber(MathNumeric userReservedNumber) {
+        if(userReservedNumber!=null)
+            setUserReservedNumber(userReservedNumber.asBigDecimal());
+        else
+             setUserReservedNumber((BigDecimal) null);      
+            }
+    public BigDecimal getUserReservedNumber() {
+        return userReservedNumber;
+    }
+
+    public void setSalesRegion(String salesRegion) {
+        this.salesRegion = salesRegion;
+    }
+
+    public String getSalesRegion() {
+        return salesRegion;
+    }
+
+    public void setCategoryCodeAddressBook12(String categoryCodeAddressBook12) {
+        this.categoryCodeAddressBook12 = categoryCodeAddressBook12;
+    }
+
+    public String getCategoryCodeAddressBook12() {
+        return categoryCodeAddressBook12;
+    }
+
+    public void setPhonePrefix(String phonePrefix) {
+        this.phonePrefix = phonePrefix;
+    }
+
+    public String getPhonePrefix() {
+        return phonePrefix;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber_XTN(String phoneNumber_XTN) {
+        this.phoneNumber_XTN = phoneNumber_XTN;
+    }
+
+    public String getPhoneNumber_XTN() {
+        return phoneNumber_XTN;
+    }
+
+    public void setUserReservedCode1(String userReservedCode1) {
+        this.userReservedCode1 = userReservedCode1;
+    }
+
+    public String getUserReservedCode1() {
+        return userReservedCode1;
+    }
+
+    public void setUserReservedReference1(String userReservedReference1) {
+        this.userReservedReference1 = userReservedReference1;
+    }
+
+    public String getUserReservedReference1() {
+        return userReservedReference1;
+    }
+
+    public void setUserReservedAmount1(BigDecimal userReservedAmount1) {
+        this.userReservedAmount1 = userReservedAmount1;
+    }
+    public void setUserReservedAmount1(MathNumeric userReservedAmount1) {
+        if(userReservedAmount1!=null)
+            setUserReservedAmount1(userReservedAmount1.asBigDecimal());
+        else
+             setUserReservedAmount1((BigDecimal) null);      
+            }
+    public BigDecimal getUserReservedAmount1() {
+        return userReservedAmount1;
+    }
+
+    public void setUserReservedDate1(Date userReservedDate1) {
+        this.userReservedDate1 = userReservedDate1;
+    }
+
+    public Date getUserReservedDate1() {
+        return userReservedDate1;
+    }
+
+    public void setUserReservedNumber1(BigDecimal userReservedNumber1) {
+        this.userReservedNumber1 = userReservedNumber1;
+    }
+    public void setUserReservedNumber1(MathNumeric userReservedNumber1) {
+        if(userReservedNumber1!=null)
+            setUserReservedNumber1(userReservedNumber1.asBigDecimal());
+        else
+             setUserReservedNumber1((BigDecimal) null);      
+            }
+    public BigDecimal getUserReservedNumber1() {
+        return userReservedNumber1;
+    }
+
+    /**
+     * User Reserved Date
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URDT <br>
+     * EnterpriseOne field length:  6 <br>
+     */
+    private Date userReservedDate1 = null;
+
+    /**
+     * User Reserved Number
+     * <p>
+     * TODO: Description using Glossary Text from EnterpriseOne if appropriate.
+     * </p>
+     * TODO: EnterpriseOne Key Field: false <br>
+     * EnterpriseOne Alias: URAB <br>
+     * EnterpriseOne field length:  8 <br>
+     * EnterpriseOne decimal places: 0 <br>
+     */
+    private BigDecimal userReservedNumber1 = null;
+
+   // private MessagesVO messages = new MessagesVO();
+    /**
+     * TODO: Default public constructor for instantiating: ACNOutput_Published
+     */
+    public ACNOutput_Published() {
+    }
+
+   /* public ACNOutput_Published(InternalGetACN InternalVO) {
+        // In this function we map the internal VO return values to the Output VO of the Publishsed biz
+        //service 
+        this.setAddressLine1(InternalVO.getSTRAS());
+        this.setCity(InternalVO.getORT01());
+        this.setState(InternalVO.getREGIO());
+        this.setPostalCode(InternalVO.getPSLTZ());
+        this.setCounty(InternalVO.getORT02());
+        this.setCountry(InternalVO.getLAND1());
+        this.setTaxIDAdditionalIndividual(InternalVO.getTXJCD());
+        this.setSearchType(InternalVO.getCUST_REC_T());
+        this.setAddressNumber(InternalVO.getCUST_ACN());
+        this.setAddressLine2(InternalVO.getLGY_NAME2());
+        this.setDescription(InternalVO.getTYPE_CUST());
+        this.setAddressNumber5th(InternalVO.getTRUE_ACN());
+        this.setUserReservedAmount(InternalVO.getST_TWN_NBR());
+        this.setPartnerAddressNumber(InternalVO.getWHL_SVN_ID());
+        this.setOCKanbanCardNo(InternalVO.getWHL_MKT_ID());
+       // this.setCategoryCodeAddressBook01(InternalVO.getHDQTRS());
+        this.setPartnerAddressNumber1(InternalVO.getFTN_SVN_ID());
+        this.setOCKanbanCardNo1(InternalVO.getFTN_WHL_ID());
+        this.setAddressNumber1st(InternalVO.getHDQTRS());
+        this.setBusinessUnit(InternalVO.getEXP_DEPT());
+        this.setCategoryCodeAddressBook13(InternalVO.getCONCESS_NO());
+        this.setAddressNumber2nd(InternalVO.getCHAIN());
+        this.setUserReservedNumber(InternalVO.getFTN_GEO_ID());
+        this.setUserReservedNumber(InternalVO.getWHL_SVN_ID());
+        this.setCategoryCodeAddressBook12(InternalVO.getFTN_FRAN());
+        this.setPhonePrefix(InternalVO.getPH_AREA_CD());
+        this.setPhoneNumber(InternalVO.getPH_LIN_NBR());
+        this.setUserReservedCode1(InternalVO.getURCD());
+        this.setUserReservedReference1(InternalVO.getURRF());
+        this.setUserReservedAmount1(InternalVO.getURAT());
+        this.setUserReservedDate1(InternalVO.getURDT());
+        this.setUserReservedNumber1(InternalVO.getURAB());
+
+
+    }*/
+    
+    public void setE1MessageList(E1MessageList messages) {
+    }
+}
