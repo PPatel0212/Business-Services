@@ -1,0 +1,127 @@
+package oracle.e1.bssv.JP570101.valueobject;
+
+import java.io.Serializable;
+
+import java.util.ArrayList;
+
+import oracle.e1.bssv.J570101.valueobject.GetACN;
+import oracle.e1.bssv.J570101.valueobject.InternalGetACN;
+import oracle.e1.bssv.JP570101.valueobject.ACNInput_Published;
+//import oracle.e1.bssv.JP574901.valueobject.AddF55PSH01;
+import oracle.e1.bssvfoundation.base.IContext;
+import oracle.e1.bssvfoundation.base.ValueObject;
+import oracle.e1.bssvfoundation.connection.IConnection;
+import oracle.e1.bssvfoundation.exception.BSSVDataFormatterException;
+import oracle.e1.bssvfoundation.util.E1Message;
+import oracle.e1.bssvfoundation.util.E1MessageList;
+import oracle.e1.bssvfoundation.util.MathNumeric;
+
+/**
+ * TODO: Java Doc comments for Value Object here
+ */
+public class GetACNPublished extends ValueObject implements Serializable {
+    /**
+     * TODO: Default public constructor for instantiating: GetACNPublished
+     */
+    private ACNInput_Published addACN[];
+
+    public E1MessageList mapFromPublished(IContext context,IConnection connection, GetACN internalVO) {
+        E1MessageList messages = new E1MessageList();
+        ArrayList AL = new ArrayList();
+
+                if (this.getACN()!= null)
+                {
+                    for (int detailRecords = 0; detailRecords < this.getACN().length; detailRecords++)            
+                    {
+                        ACNInput_Published addACN_1 = this.getACN(detailRecords);
+                        InternalGetACN InternalVO = new InternalGetACN();  
+        
+        InternalVO.setRECTYPE(addACN_1.getRECTYPE());
+        InternalVO.setKUNNR(addACN_1.getKUNNR());
+        InternalVO.setNAME1(addACN_1.getNAME1());
+        InternalVO.setEXT_STNBR(addACN_1.getEXT_STNBR());
+        InternalVO.setSTRAS(addACN_1.getSTRAS());
+        InternalVO.setORT01(addACN_1.getORT01());
+        InternalVO.setREGIO(addACN_1.getREGIO());
+        InternalVO.setPSLTZ(addACN_1.getPSLTZ());
+        InternalVO.setORT02(addACN_1.getORT02());
+        InternalVO.setLAND1(addACN_1.getLAND1());
+        InternalVO.setTXJCD(addACN_1.getTXJCD());
+        InternalVO.setCUST_REC_T(addACN_1.getCUST_REC_T());
+      if(addACN_1.getCUST_ACN()!=null)
+      {  InternalVO.setCUST_ACN(new MathNumeric(addACN_1.getCUST_ACN())); }   
+       
+        InternalVO.setLGY_NAME2(addACN_1.getLGY_NAME2());
+        InternalVO.setTYPE_CUST(addACN_1.getTYPE_CUST());
+       
+        if(addACN_1.getTRUE_ACN()!=null)
+        {
+        InternalVO.setTRUE_ACN(new MathNumeric(addACN_1.getTRUE_ACN()));}
+        
+        InternalVO.setTERM_DATE(addACN_1.getTERM_DATE());
+        if(addACN_1.getST_TWN_NBR()!=null)
+        {InternalVO.setST_TWN_NBR(new MathNumeric(addACN_1.getST_TWN_NBR()));}
+        if(addACN_1.getWHL_SVN_ID()!=null)
+        {InternalVO.setWHL_SVN_ID(new MathNumeric(addACN_1.getWHL_SVN_ID()));}
+        if(addACN_1.getWHL_MKT_ID()!=null)
+        { InternalVO.setWHL_MKT_ID(new MathNumeric(addACN_1.getWHL_MKT_ID()));}
+        if(addACN_1.getHDQTRS()!=null)
+        {InternalVO.setHDQTRS(new MathNumeric(addACN_1.getHDQTRS()));}
+        if(addACN_1.getEXP_DEPT()!=null && (!addACN_1.getEXP_DEPT().equals("")))
+        {
+       // InternalVO.setEXP_DEPT(addACN_1.getEXP_DEPT().concat(12-addACN_1.getEXP_DEPT().length());
+       // Format Branchplant
+             
+                  try {
+                      InternalVO.setEXP_DEPT(context.getBSSVDataFormatter().format(addACN_1.getEXP_DEPT(), "MCU"));
+                  } catch (BSSVDataFormatterException e) {
+                      context.getBSSVLogger().app(context, "Error formatting businessUnit.", null, InternalVO, e);
+                      messages.addMessage(new E1Message(context, "002FIS", addACN_1.getEXP_DEPT()));
+                  }
+        }
+          else
+          {addACN_1.setEXP_DEPT("        0001");
+        }
+        InternalVO.setCONCESS_NO(addACN_1.getCONCESS_NO());
+        if(addACN_1.getCHAIN()!=null)
+        {InternalVO.setCHAIN(new MathNumeric(addACN_1.getCHAIN()));}
+        //InternalVO.setTRUE_ACN(new MathNumeric(addACN_1.getTRUE_ACN()));
+        if(addACN_1.getFTN_GEO_ID()!=null)
+        {InternalVO.setFTN_GEO_ID(new MathNumeric(addACN_1.getFTN_GEO_ID()));}
+        InternalVO.setTYP_ACC(addACN_1.getTYP_ACC());
+        //InternalVO.setWHL_SVN_ID(new MathNumeric(addACN_1.getWHL_SVN_ID()));
+        InternalVO.setFTN_FRAN(addACN_1.getFTN_FRAN());
+        InternalVO.setPH_AREA_CD(addACN_1.getPH_AREA_CD());
+        InternalVO.setPH_LIN_NBR(addACN_1.getPH_LIN_NBR());
+        InternalVO.setPH_XTN_NBR(addACN_1.getPH_XTN_NBR());
+        InternalVO.setURCD(addACN_1.getURCD());
+        InternalVO.setURRF(addACN_1.getURRF());
+        if(addACN_1.getURAT()!=null)
+        { InternalVO.setURAT(new MathNumeric(addACN_1.getURAT()));}
+        InternalVO.setURDT(addACN_1.getURDT());
+        if(addACN_1.getURAB()!=null)
+        {InternalVO.setURAB(new MathNumeric(addACN_1.getURAB()));}
+                        AL.add(InternalVO);
+                        }
+                        internalVO.setInternalACN(AL);
+                        }
+        return messages;
+    }
+                public GetACNPublished() {
+    }
+    public void setACN(ACNInput_Published[] addACN) {
+           this.addACN = addACN;
+       }
+       
+       public void setACN(ACNInput_Published addACN, int i) {
+           this.addACN[i] = addACN;
+       }
+
+       public ACNInput_Published[] getACN() {
+           return addACN;
+       }
+
+       public ACNInput_Published getACN(int i) {
+           return addACN[i];
+       }
+}
