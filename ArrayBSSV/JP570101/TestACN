@@ -1,0 +1,69 @@
+package oracle.e1.bssv.JP570101;
+
+import java.math.BigDecimal;
+
+import java.util.Calendar;
+
+import oracle.e1.bssv.JP570101.valueobject.ACNInput_Published;
+import oracle.e1.bssv.JP570101.valueobject.ACNOutput_Published;
+import oracle.e1.bssv.JP570101.valueobject.GetACNPublished;
+import oracle.e1.bssv.JP570101.valueobject.ShowACNPublished;
+//import oracle.e1.bssv.JP574901.OTMInboundShipmentManager;
+//import oracle.e1.bssv.JP574901.valueobject.AddF55PSH01;
+//import oracle.e1.bssv.JP574901.valueobject.PublishedGetF55PSH01;
+//import oracle.e1.bssv.JP574901.valueobject.PublishedShowF55PSH01;
+//import oracle.e1.bssv.JP574901.valueobject.AddF55PSH01;
+//import oracle.e1.bssv.JP574901.valueobject.PublishedGetF55PSH01;
+import oracle.e1.bssvfoundation.exception.BusinessServiceException;
+import oracle.e1.bssvfoundation.util.E1MessageList;
+import oracle.e1.bssvfoundation.util.MathNumeric;
+
+
+
+public class TestACN {
+    public TestACN() {
+        super();
+    }
+
+    public static void main(String[] args) {
+        //TestACN testACN = new TestACN();
+            ACNInput_Published p[]= new ACNInput_Published[1];
+            ACNInput_Published p11=new ACNInput_Published();
+            ACNInput_Published p12=new ACNInput_Published();
+            GetACNPublished s1= new GetACNPublished();
+            
+            p11.setCUST_ACN(new Integer(1005567));
+            p11.setCUST_REC_T("00");
+            p11.setEXP_DEPT("W715");
+            p11.setKUNNR("tt1xzz");
+            p11.setNAME1("N1655b34");
+            p11.setWHL_MKT_ID(new BigDecimal(554433));
+            p11.setWHL_SVN_ID(new BigDecimal(665578));
+            // p.setdatePromisedShipJu(new Date(2/7/2017));
+          // p12.setCUST_ACN(new Integer(10281));
+          // p12.setCUST_REC_T("00");
+          // p12.setEXP_DEPT("W715");
+          // p12.setNAME1("NAM1zz");
+         //  p12.setKUNNR("KUN");
+            p[0]=p11;
+         //  p[1]=p12;
+           // p[1]=p12;
+            s1.setACN(p);
+            //OTMInboundShipmentManager mgr = new OTMInboundShipmentManager(s1);
+            ACNManager OT=new ACNManager();
+            E1MessageList e1;
+            //AddF55PSH1Output s =new AddF55PSH01Output();;
+           try {
+               ShowACNPublished sh=OT.AddACNInfo(s1);
+                //String a;
+               // s= mgr.addF55PSH01(p);
+            } catch (BusinessServiceException e) {
+                e.printStackTrace(System.out);
+            }
+            finally {
+           // System.out.println(s1.toString());
+            }
+            }
+            }
+
+
