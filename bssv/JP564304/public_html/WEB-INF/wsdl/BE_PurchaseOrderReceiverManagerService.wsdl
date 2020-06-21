@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+     name="BE_PurchaseOrderReceiverManagerService"
+     targetNamespace="http://be.e1.bssv.JP564304/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://be.e1.bssv.JP564304/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    >
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://be.e1.bssv.JP564304/"
+             elementFormDefault="qualified" xmlns:tns="http://be.e1.bssv.JP564304/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/">
+            <complexType name="BusinessServiceException">
+                <sequence>
+                    <element name="message" type="string" nillable="true"/>
+                    <element name="requestID" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="MOInfo">
+                <sequence>
+                    <element name="MUpdateDate" type="string" nillable="true"/>
+                    <element name="moSeqNo" type="int"/>
+                    <element name="szFileName" type="string" nillable="true"/>
+                    <element name="szMoKey" type="string" nillable="true"/>
+                    <element name="MUpdateTimeStamp" type="int"/>
+                    <element name="szItemName" type="string" nillable="true"/>
+                    <element name="szMoName" type="string" nillable="true"/>
+                    <element name="MUpdateUserID" type="string" nillable="true"/>
+                    <element name="szQName" type="string" nillable="true"/>
+                    <element name="szData" type="anyType" nillable="true"/>
+                    <element name="szMoType" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getPurchaseOrderReceiver" type="tns:GetF43121" nillable="true"/>
+            <complexType name="GetF43121">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="companyKeyOrderNo" type="string" nillable="true"/>
+                            <element name="orderType" type="string" nillable="true"/>
+                            <element name="matchType" type="string" nillable="true"/>
+                            <element name="lineNumber" type="decimal" nillable="true"/>
+                            <element name="documentOrderInvoiceE" type="int" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="ValueObject">
+                <sequence/>
+            </complexType>
+            <complexType name="ShowF43121">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="found" type="string" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="getPurchaseOrderReceiverResponse" type="tns:ShowF43121" nillable="true"/>
+            <element name="BusinessServiceExceptionElement" type="tns:BusinessServiceException"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="BE_PurchaseOrderReceiverManagerPortType_getPurchaseOrderReceiver">
+        <wsdl:part name="parameters" element="tns:getPurchaseOrderReceiver"/>
+    </wsdl:message>
+    <wsdl:message name="BE_PurchaseOrderReceiverManagerPortType_getPurchaseOrderReceiverResponse">
+        <wsdl:part name="return" element="tns:getPurchaseOrderReceiverResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessServiceException">
+        <wsdl:part name="BusinessServiceExceptionElement" element="tns:BusinessServiceExceptionElement"/>
+    </wsdl:message>
+    <wsdl:portType name="BE_PurchaseOrderReceiverManager">
+        <wsdl:operation name="getPurchaseOrderReceiver">
+            <wsdl:input message="tns:BE_PurchaseOrderReceiverManagerPortType_getPurchaseOrderReceiver"/>
+            <wsdl:output message="tns:BE_PurchaseOrderReceiverManagerPortType_getPurchaseOrderReceiverResponse"/>
+            <wsdl:fault name="BusinessServiceException" message="tns:BusinessServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BE_PurchaseOrderReceiverManager" type="tns:BE_PurchaseOrderReceiverManager">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getPurchaseOrderReceiver">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="return"/>
+            </wsdl:output>
+            <wsdl:fault name="BusinessServiceException">
+                <soap:fault name="BusinessServiceException" use="literal" encodingStyle=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="BE_PurchaseOrderReceiverManagerService">
+        <wsdl:port name="BE_PurchaseOrderReceiverManagerPort" binding="tns:BE_PurchaseOrderReceiverManager">
+            <soap:address location="http://localhost:7101/context-root-JP564304/BE_PurchaseOrderReceiverManagerPort"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

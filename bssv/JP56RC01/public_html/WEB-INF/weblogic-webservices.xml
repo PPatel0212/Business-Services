@@ -1,0 +1,13 @@
+<weblogic-webservices xmlns="http://www.bea.com/ns/weblogic/weblogic-webservices">
+  <webservice-description>
+    <webservice-description-name>BE_CheckAndRetrieveItemRevQueryManagerService</webservice-description-name>
+    <webservice-type>JAXRPC</webservice-type>
+    <port-component>
+      <port-component-name>BE_CheckAndRetrieveItemRevQueryManagerPort</port-component-name>
+      <service-endpoint-address>
+        <webservice-contextpath>context-root-JP56RC01</webservice-contextpath>
+        <webservice-serviceuri>/BE_CheckAndRetrieveItemRevQueryManagerPort</webservice-serviceuri>
+      </service-endpoint-address>
+    </port-component>
+  </webservice-description>
+</weblogic-webservices>

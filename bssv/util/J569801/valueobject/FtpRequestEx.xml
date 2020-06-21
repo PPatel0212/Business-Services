@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ftp-request-ex>
+  <sz-error-message></sz-error-message>
+  <sz-source-file></sz-source-file>
+  <sz-sign-key></sz-sign-key>
+  <sz-cipher-key></sz-cipher-key>
+  <CDeleteSourceYN></CDeleteSourceYN>
+  <sz-composite-id></sz-composite-id>
+  <sz-destination-host></sz-destination-host>
+  <sz-asynch-flag></sz-asynch-flag>
+  <sz-destination-path></sz-destination-path>
+  <NCipherMode>0</NCipherMode>
+  <sz-source-host></sz-source-host>
+  <CErrorFlag></CErrorFlag>
+  <sz-source-path></sz-source-path>
+  <mn-jobid negative="false" decimal-position="0" currency-decimals="0"
+            zero="true">
+    <currency-code></currency-code>
+    <value>0</value>
+  </mn-jobid>
+  <sz-destination-file></sz-destination-file>
+  <sz-status></sz-status>
+</ftp-request-ex>

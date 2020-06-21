@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="processItemBOMNotification" targetNamespace="http://xmlns.oracle.com/P2SINT0001/ItemBOMNotification/processItemBOMNotification" xmlns="" xmlns:client="http://xmlns.oracle.com/P2SINT0001/ItemBOMNotification/processItemBOMNotification" xmlns:ns1="http://www.beav.com/plm/itembomnotification" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+        http://fmwdvcluster.beav.com:8001/soa-infra/services/ECM/ItemBOMNotification!1.0/processItemBOMNotification.wsdl
+    </wsdl:documentation>
+  <plnk:partnerLinkType name="processItemBOMNotification">
+    <plnk:role name="processItemBOMNotificationProvider" portType="client:processItemBOMNotification"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:client="http://xmlns.oracle.com/P2SINT0001/ItemBOMNotification/processItemBOMNotification" xmlns:ns1="http://www.beav.com/plm/itembomnotification" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://www.beav.com/plm/itembomnotification" schemaLocation="ItemBOMNotification.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="processItemBOMNotificationRequestMessage">
+    <wsdl:part element="ns1:ItemBOMNotification" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="processItemBOMNotificationResponseMessage">
+    <wsdl:part element="ns1:ItemBOMNotificationResponse" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="processItemBOMNotification">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:processItemBOMNotificationRequestMessage"/>
+      <wsdl:output message="client:processItemBOMNotificationResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="processItemBOMNotificationBinding" type="client:processItemBOMNotification">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation soapAction="process" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="processitembomnotification_client_ep">
+    <wsdl:port binding="client:processItemBOMNotificationBinding" name="processItemBOMNotification_pt">
+      <soap:address location="http://fmwdvcluster.beav.com:8001/soa-infra/services/ECM/ItemBOMNotification/processitembomnotification_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

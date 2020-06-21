@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+     name="BE_NextItemNumberManagerService"
+     targetNamespace="http://be.e1.bssv.JP560010/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://be.e1.bssv.JP560010/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    >
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://be.e1.bssv.JP560010/"
+             elementFormDefault="qualified" xmlns:tns="http://be.e1.bssv.JP560010/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/">
+            <complexType name="BusinessServiceException">
+                <sequence>
+                    <element name="message" type="string" nillable="true"/>
+                    <element name="requestID" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="nextItemNumberManager" type="tns:ShowNextItemNumber" nillable="true"/>
+            <complexType name="ShowNextItemNumber">
+                <complexContent>
+                    <extension base="tns:MessageValueObject">
+                        <sequence>
+                            <element name="itemNumberShort" type="int" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="E1MessageList">
+                <sequence>
+                    <element name="e1Messages" type="tns:E1Message" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="E1Message">
+                <sequence>
+                    <element name="message" type="string" nillable="true"/>
+                    <element name="messagePrefix" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="MessageValueObject">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="e1MessageList" type="tns:E1MessageList" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="ValueObject">
+                <sequence/>
+            </complexType>
+            <element name="nextItemNumberManagerResponse" type="tns:ShowNextItemNumber" nillable="true"/>
+            <element name="BusinessServiceExceptionElement" type="tns:BusinessServiceException"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="BE_NextItemNumberManagerPortType_nextItemNumberManager">
+        <wsdl:part name="parameters" element="tns:nextItemNumberManager"/>
+    </wsdl:message>
+    <wsdl:message name="BE_NextItemNumberManagerPortType_nextItemNumberManagerResponse">
+        <wsdl:part name="return" element="tns:nextItemNumberManagerResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessServiceException">
+        <wsdl:part name="BusinessServiceExceptionElement" element="tns:BusinessServiceExceptionElement"/>
+    </wsdl:message>
+    <wsdl:portType name="BE_NextItemNumberManager">
+        <wsdl:operation name="nextItemNumberManager">
+            <wsdl:input message="tns:BE_NextItemNumberManagerPortType_nextItemNumberManager"/>
+            <wsdl:output message="tns:BE_NextItemNumberManagerPortType_nextItemNumberManagerResponse"/>
+            <wsdl:fault name="BusinessServiceException" message="tns:BusinessServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BE_NextItemNumberManager" type="tns:BE_NextItemNumberManager">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="nextItemNumberManager">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="return"/>
+            </wsdl:output>
+            <wsdl:fault name="BusinessServiceException">
+                <soap:fault name="BusinessServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="BE_NextItemNumberManagerService">
+        <wsdl:port name="BE_NextItemNumberManagerPort" binding="tns:BE_NextItemNumberManager">
+            <soap:address location="http://localhost:7101/context-root-JP560010/BE_NextItemNumberManagerPort"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

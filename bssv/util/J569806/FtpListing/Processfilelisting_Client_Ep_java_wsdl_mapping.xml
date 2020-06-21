@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<j2ee:java-wsdl-mapping xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+  <j2ee:package-mapping>
+    <j2ee:package-type>be.e1.bssv.util.J569806.FtpListing</j2ee:package-type>
+    <j2ee:namespaceURI>http://xmlns.oracle.com/FTPManager/FTPListing/processFileListing</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:package-mapping>
+    <j2ee:package-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting</j2ee:package-type>
+    <j2ee:namespaceURI>http://www.beav.com/fmw/filelisting</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileListingRequest</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:fil="http://www.beav.com/fmw/filelisting">fil:FileListingRequest</j2ee:root-type-qname>
+    <j2ee:qname-scope>element</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileListingReply</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:fil="http://www.beav.com/fmw/filelisting">fil:FileListingReply</j2ee:root-type-qname>
+    <j2ee:qname-scope>element</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileListingRequest</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://www.beav.com/fmw/filelisting:>FileListingRequest</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>HostJNDI</j2ee:java-variable-name>
+      <j2ee:xml-element-name>hostJNDI</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Directory</j2ee:java-variable-name>
+      <j2ee:xml-element-name>directory</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>SearchPattern</j2ee:java-variable-name>
+      <j2ee:xml-element-name>searchPattern</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Recursive</j2ee:java-variable-name>
+      <j2ee:xml-element-name>recursive</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileListingReply</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://www.beav.com/fmw/filelisting:>FileListingReply</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>StatusCode</j2ee:java-variable-name>
+      <j2ee:xml-element-name>statusCode</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>StatusMessage</j2ee:java-variable-name>
+      <j2ee:xml-element-name>statusMessage</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>FileList</j2ee:java-variable-name>
+      <j2ee:xml-element-name>FileList</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileList</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://www.beav.com/fmw/filelisting:>>FileListingReply>FileList</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>FileName</j2ee:java-variable-name>
+      <j2ee:xml-element-name>fileName</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>DirectoryName</j2ee:java-variable-name>
+      <j2ee:xml-element-name>directoryName</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:service-interface-mapping>
+    <j2ee:service-interface>be.e1.bssv.util.J569806.FtpListing.Processfilelisting_Client_Ep</j2ee:service-interface>
+    <j2ee:wsdl-service-name xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPListing/processFileListing">proc:processfilelisting_client_ep</j2ee:wsdl-service-name>
+    <j2ee:port-mapping>
+      <j2ee:port-name>processFileListing_pt</j2ee:port-name>
+      <j2ee:java-port-name>ProcessFileListing_Pt</j2ee:java-port-name>
+    </j2ee:port-mapping>
+  </j2ee:service-interface-mapping>
+  <j2ee:service-endpoint-interface-mapping>
+    <j2ee:service-endpoint-interface>be.e1.bssv.util.J569806.FtpListing.ProcessFileListing</j2ee:service-endpoint-interface>
+    <j2ee:wsdl-port-type xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPListing/processFileListing">proc:processFileListing</j2ee:wsdl-port-type>
+    <j2ee:wsdl-binding xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPListing/processFileListing">proc:processFileListingBinding</j2ee:wsdl-binding>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>process</j2ee:java-method-name>
+      <j2ee:wsdl-operation>process</j2ee:wsdl-operation>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileListingRequest</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPListing/processFileListing">proc:processFileListingRequestMessage</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>payload</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>be.e1.bssv.util.J569806.com.beav.fmw.filelisting.FileListingReply</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPListing/processFileListing">proc:processFileListingResponseMessage</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>payload</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+  </j2ee:service-endpoint-interface-mapping>
+</j2ee:java-wsdl-mapping>

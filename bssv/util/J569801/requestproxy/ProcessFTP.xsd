@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://beaerospace.com/FTPService/FTPService/ProcessFTP" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="process">
+        <complexType>
+            <sequence>
+                <element maxOccurs="1" minOccurs="0" name="jobId" type="long"/>
+                <element name="fromHost" type="string"/>
+                <element name="toHost" type="string"/>
+                <element name="fromFile" type="string"/>
+                <element name="toFile" type="string"/>
+                <element name="fromDir" type="string"/>
+                <element name="toDir" type="string"/>
+                <element name="deleteFlag" type="string"/>
+                <element name="cipherMode" type="int"/>
+                <element name="cipherKey" type="string"/>
+                <element name="signKey" type="string"/>
+                <element name="syncCall" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processResponse">
+        <complexType>
+            <sequence>
+                <element name="status" type="string"/>
+                <element name="compositeId" type="string"/>
+                <element name="errCode" type="string"/>
+                <element name="errResponse" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

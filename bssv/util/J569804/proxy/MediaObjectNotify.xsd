@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://www.beav.com/e1/mediaobjectnotify"
+    xmlns="http://www.beav.com/e1/mediaobjectnotify" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="MediaObjectNotifyRequest">
+        <xsd:annotation>
+            <xsd:documentation>A sample element</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="MediaObject">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Name" type="xsd:string"/>
+                            <xsd:element name="Key" type="xsd:string"/>
+                            <xsd:element name="SequenceNumber" type="xsd:integer"/>
+                            <xsd:element name="ItemName" type="xsd:string"/>
+                            <xsd:element name="Type" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="ActionCode" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="MediaObjectNotifyResponce">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="StatusCode" type="xsd:integer"/>
+                <xsd:element name="StatusMessage" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

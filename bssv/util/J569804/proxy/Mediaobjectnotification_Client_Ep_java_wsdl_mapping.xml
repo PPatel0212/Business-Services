@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<j2ee:java-wsdl-mapping xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+  <j2ee:package-mapping>
+    <j2ee:package-type>be.e1.bssv.util.J569804.proxy</j2ee:package-type>
+    <j2ee:namespaceURI>http://xmlns.oracle.com/MediaObjectsManager/MediaObjectsManager/MediaObjectNotification</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:package-mapping>
+    <j2ee:package-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify</j2ee:package-type>
+    <j2ee:namespaceURI>http://www.beav.com/e1/mediaobjectnotify</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObjectNotifyRequest</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:med="http://www.beav.com/e1/mediaobjectnotify">med:MediaObjectNotifyRequest</j2ee:root-type-qname>
+    <j2ee:qname-scope>element</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObjectNotifyResponce</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:med="http://www.beav.com/e1/mediaobjectnotify">med:MediaObjectNotifyResponce</j2ee:root-type-qname>
+    <j2ee:qname-scope>element</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObjectNotifyRequest</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://www.beav.com/e1/mediaobjectnotify:>MediaObjectNotifyRequest</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>MediaObject</j2ee:java-variable-name>
+      <j2ee:xml-element-name>MediaObject</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ActionCode</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ActionCode</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObjectNotifyResponce</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://www.beav.com/e1/mediaobjectnotify:>MediaObjectNotifyResponce</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>StatusCode</j2ee:java-variable-name>
+      <j2ee:xml-element-name>StatusCode</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>StatusMessage</j2ee:java-variable-name>
+      <j2ee:xml-element-name>StatusMessage</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObject</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://www.beav.com/e1/mediaobjectnotify:>>MediaObjectNotifyRequest>MediaObject</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Name</j2ee:java-variable-name>
+      <j2ee:xml-element-name>Name</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Key</j2ee:java-variable-name>
+      <j2ee:xml-element-name>Key</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>SequenceNumber</j2ee:java-variable-name>
+      <j2ee:xml-element-name>SequenceNumber</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ItemName</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ItemName</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Type</j2ee:java-variable-name>
+      <j2ee:xml-element-name>Type</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:service-interface-mapping>
+    <j2ee:service-interface>be.e1.bssv.util.J569804.proxy.Mediaobjectnotification_Client_Ep</j2ee:service-interface>
+    <j2ee:wsdl-service-name xmlns:med="http://xmlns.oracle.com/MediaObjectsManager/MediaObjectsManager/MediaObjectNotification">med:mediaobjectnotification_client_ep</j2ee:wsdl-service-name>
+    <j2ee:port-mapping>
+      <j2ee:port-name>MediaObjectNotification_pt</j2ee:port-name>
+      <j2ee:java-port-name>MediaObjectNotification_Pt</j2ee:java-port-name>
+    </j2ee:port-mapping>
+  </j2ee:service-interface-mapping>
+  <j2ee:service-endpoint-interface-mapping>
+    <j2ee:service-endpoint-interface>be.e1.bssv.util.J569804.proxy.MediaObjectNotification</j2ee:service-endpoint-interface>
+    <j2ee:wsdl-port-type xmlns:med="http://xmlns.oracle.com/MediaObjectsManager/MediaObjectsManager/MediaObjectNotification">med:MediaObjectNotification</j2ee:wsdl-port-type>
+    <j2ee:wsdl-binding xmlns:med="http://xmlns.oracle.com/MediaObjectsManager/MediaObjectsManager/MediaObjectNotification">med:MediaObjectNotificationBinding</j2ee:wsdl-binding>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>process</j2ee:java-method-name>
+      <j2ee:wsdl-operation>process</j2ee:wsdl-operation>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObjectNotifyRequest</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:med="http://xmlns.oracle.com/MediaObjectsManager/MediaObjectsManager/MediaObjectNotification">med:MediaObjectNotificationRequestMessage</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>payload</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>be.e1.bssv.util.J569804.com.beav.e1.mediaobjectnotify.MediaObjectNotifyResponce</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:med="http://xmlns.oracle.com/MediaObjectsManager/MediaObjectsManager/MediaObjectNotification">med:MediaObjectNotificationResponseMessage</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>payload</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+  </j2ee:service-endpoint-interface-mapping>
+</j2ee:java-wsdl-mapping>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://www.beav.com/kewill/compliancescreening"
+    xmlns="http://www.beav.com/kewill/compliancescreening" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="CompliantScreeningRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Administration">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="ticket" type="xsd:string"/>
+                            <xsd:element name="subscriberId" type="xsd:string"/>
+                            <xsd:element name="subscriberPassword" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="requestDate" type="xsd:dateTime"/>
+                            <xsd:element minOccurs="0"
+                                name="outputFormat" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="includedRequest" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="comments" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="TransactionRequest">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0"
+                                name="EmbargoScreening" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="PartyScreening" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="LicenseScreening" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="ticket" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="comments" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="transactionDate" type="xsd:dateTime"/>
+                            <xsd:element minOccurs="0"
+                                name="userDefined" type="xsd:string"/>
+                            <xsd:element name="shipFromCountry">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element name="schema" type="xsd:string"/>
+                                    <xsd:element name="domain" type="xsd:string"/>
+                                    <xsd:element name="code" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="shipToCountry">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element minOccurs="0"
+                                    name="schema" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="domain" type="xsd:string"/>
+                                    <xsd:element name="code" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded"
+                                minOccurs="0" name="classifier">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element minOccurs="0"
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element name="label" type="xsd:string"/>
+                                    <xsd:element name="classification">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element
+                                    name="label" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded"
+                                minOccurs="0" name="party">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element minOccurs="0"
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="name" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="contact" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="addresses" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="city" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="subDivision" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="postalCode" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="country">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="schema" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="domain" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="code" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0"
+                                    name="email" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="phone" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="fax" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="endUserType" type="xsd:string"/>
+                                    <xsd:element minOccurs="0" name="endUserParty">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="endUser" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="military" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="endUserCertificate" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="nonUSGovernment" type="xsd:string"/>
+                                    <xsd:element
+                                    maxOccurs="unbounded"
+                                    minOccurs="0" name="descriptor">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="type" type="xsd:string"/>
+
+                                    <xsd:element
+                                    maxOccurs="unbounded"
+                                    minOccurs="0" name="attribute">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="type" type="xsd:string"/>
+
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="value" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0"
+                                    name="userDefined" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" name="TransactionLine">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element name="product">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    name="productId" type="xsd:string"/>
+                                    <xsd:element name="countryOfOrigin">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+
+                                    <xsd:element
+                                    name="schema" type="xsd:string"/>
+
+                                    <xsd:element
+                                    name="domain" type="xsd:string"/>
+
+                                    <xsd:element
+                                    name="code" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="value" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="endUseType" type="xsd:string"/>
+                                    <xsd:element name="classifier">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+
+                                    <xsd:element
+                                    name="type" type="xsd:string"/>
+
+                                    <xsd:element
+                                    name="label" type="xsd:string"/>
+
+                                    <xsd:element name="classification">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+
+                                    <xsd:element
+                                    name="type" type="xsd:string"/>
+
+                                    <xsd:element
+                                    name="label" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element
+                                    name="licenseException" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="encryption" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="userDefined" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="party" nillable="true">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="id" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="type"
+                                    nillable="true" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="name"
+                                    nillable="true" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="contact"
+                                    nillable="true" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="addresses"
+                                    nillable="true" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="city"
+                                    nillable="true" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="subDivision" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="postalCode"
+                                    nillable="true" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="country" nillable="true">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="schema"
+                                    nillable="true" type="xsd:string"/>
+
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="domain"
+                                    nillable="true" type="xsd:string"/>
+
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="code"
+                                    nillable="true" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="email" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="phone" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="fax" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="endUseType" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="endUserParty" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="userDefined" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded"
+                                minOccurs="0" name="descriptor">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element minOccurs="0"
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element
+                                    maxOccurs="unbounded"
+                                    minOccurs="0" name="attribute">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element
+                                    minOccurs="0"
+                                    name="value" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="parameters">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element minOccurs="0"
+                                    name="threshold" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="countryMatch" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="redflag" type="xsd:string"/>
+                                    <xsd:element minOccurs="0"
+                                    name="exactMatch" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element minOccurs="0" name="type" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="version" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="language" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="dateFormat" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="deploymentMode" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="requestDate" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="CompiantScreeningResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="statusCode" type="xsd:integer"/>
+                <xsd:element name="statusMessage" type="xsd:string"/>
+                <xsd:element name="compliant" type="xsd:boolean"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="1"
+                    name="denialType" nillable="true" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="denailMessage" type="xsd:string"/>
+                <xsd:element name="serviceResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" name="embargoResponse">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element name="userDefined" type="xsd:string"/>
+                                    <xsd:element name="country" type="xsd:string"/>
+                                    <xsd:element name="embargo" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" name="partyResponse">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element name="userDefined" type="xsd:string"/>
+                                    <xsd:element name="redFlagWords" type="xsd:string"/>
+                                    <xsd:element
+                                    maxOccurs="unbounded" name="deniedParties">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    name="id" type="xsd:string"/>
+                                    <xsd:element
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element
+                                    name="name" type="xsd:string"/>
+                                    <xsd:element
+                                    name="address" type="xsd:string"/>
+                                    <xsd:element
+                                    name="city" type="xsd:string"/>
+                                    <xsd:element
+                                    name="countryCode" type="xsd:string"/>
+                                    <xsd:element
+                                    name="denialType" type="xsd:string"/>
+                                    <xsd:element
+                                    name="agency" type="xsd:string"/>
+                                    <xsd:element
+                                    name="list" type="xsd:string"/>
+                                    <xsd:element
+                                    name="citation" type="xsd:string"/>
+                                    <xsd:element
+                                    name="citationDate" type="xsd:string"/>
+                                    <xsd:element
+                                    name="denialEffectiveDate" type="xsd:string"/>
+                                    <xsd:element
+                                    name="denialEffectiveUntil" type="xsd:string"/>
+                                    <xsd:element
+                                    name="denialProgram" type="xsd:string"/>
+                                    <xsd:element
+                                    name="listCountry" type="xsd:string"/>
+                                    <xsd:element
+                                    name="vesselCallSign" type="xsd:string"/>
+                                    <xsd:element
+                                    name="vesselType" type="xsd:string"/>
+                                    <xsd:element
+                                    name="vesselTonnage" type="xsd:string"/>
+                                    <xsd:element
+                                    name="vesselGRT" type="xsd:string"/>
+                                    <xsd:element
+                                    name="vesselFlag" type="xsd:string"/>
+                                    <xsd:element
+                                    name="vesselOwner" type="xsd:string"/>
+                                    <xsd:element
+                                    name="comments" type="xsd:string"/>
+                                    <xsd:element
+                                    name="dateAdded" type="xsd:string"/>
+                                    <xsd:element
+                                    name="controllingAgency" type="xsd:string"/>
+                                    <xsd:element
+                                    name="words" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="unbounded" name="licenseResponse">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element name="userDefined" type="xsd:string"/>
+                                    <xsd:element name="licenseRequired">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element
+                                    name="value" type="xsd:string"/>
+                                    <xsd:element
+                                    name="controlReason" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="licenseException">
+                                    <xsd:complexType>
+                                    <xsd:sequence>
+                                    <xsd:element
+                                    name="type" type="xsd:string"/>
+                                    <xsd:element
+                                    name="value" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element
+                                    name="exceptionType" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

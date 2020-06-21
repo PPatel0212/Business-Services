@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<j2ee:java-wsdl-mapping xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+  <j2ee:package-mapping>
+    <j2ee:package-type>be.e1.bssv.util.J569801.proxy</j2ee:package-type>
+    <j2ee:namespaceURI>http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:package-mapping>
+    <j2ee:package-type>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager</j2ee:package-type>
+    <j2ee:namespaceURI>http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager.ProcessResponse</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:ftp="http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager">ftp:processResponse</j2ee:root-type-qname>
+    <j2ee:qname-scope>element</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager.Process</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:ftp="http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager">ftp:process</j2ee:root-type-qname>
+    <j2ee:qname-scope>element</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager.ProcessResponse</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager:>processResponse</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Result</j2ee:java-variable-name>
+      <j2ee:xml-element-name>result</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>CompositeID</j2ee:java-variable-name>
+      <j2ee:xml-element-name>compositeID</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Status</j2ee:java-variable-name>
+      <j2ee:xml-element-name>status</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager.Process</j2ee:java-type>
+    <j2ee:anonymous-type-qname>http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager:>process</j2ee:anonymous-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>FromHost</j2ee:java-variable-name>
+      <j2ee:xml-element-name>fromHost</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ToHost</j2ee:java-variable-name>
+      <j2ee:xml-element-name>toHost</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>FromFile</j2ee:java-variable-name>
+      <j2ee:xml-element-name>fromFile</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ToFile</j2ee:java-variable-name>
+      <j2ee:xml-element-name>toFile</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>FromDir</j2ee:java-variable-name>
+      <j2ee:xml-element-name>fromDir</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ToDir</j2ee:java-variable-name>
+      <j2ee:xml-element-name>toDir</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>DeleteFlag</j2ee:java-variable-name>
+      <j2ee:xml-element-name>deleteFlag</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:service-interface-mapping>
+    <j2ee:service-interface>be.e1.bssv.util.J569801.proxy.Processftpfiles_Client_Ep</j2ee:service-interface>
+    <j2ee:wsdl-service-name xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles">proc:processftpfiles_client_ep</j2ee:wsdl-service-name>
+    <j2ee:port-mapping>
+      <j2ee:port-name>ProcessFTPFiles_pt</j2ee:port-name>
+      <j2ee:java-port-name>ProcessFTPFiles_Pt</j2ee:java-port-name>
+    </j2ee:port-mapping>
+  </j2ee:service-interface-mapping>
+  <j2ee:service-endpoint-interface-mapping>
+    <j2ee:service-endpoint-interface>be.e1.bssv.util.J569801.proxy.ProcessFTPFiles</j2ee:service-endpoint-interface>
+    <j2ee:wsdl-port-type xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles">proc:ProcessFTPFiles</j2ee:wsdl-port-type>
+    <j2ee:wsdl-binding xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles">proc:ProcessFTPFilesBinding</j2ee:wsdl-binding>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>process</j2ee:java-method-name>
+      <j2ee:wsdl-operation>process</j2ee:wsdl-operation>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager.Process</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles">proc:ProcessFTPFilesRequestMessage</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>payload</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>be.e1.bssv.util.J569801.com.oracle.xmlns.ftpmanager.ftpmanager.ftpfilemanager.ProcessResponse</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:proc="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles">proc:ProcessFTPFilesResponseMessage</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>payload</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+  </j2ee:service-endpoint-interface-mapping>
+</j2ee:java-wsdl-mapping>

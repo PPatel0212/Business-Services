@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="getGroupUserData" targetNamespace="http://xmlns.oracle.com/ADGroupUserData/ADGroupUserData/getGroupUserData" xmlns="" xmlns:client="http://xmlns.oracle.com/ADGroupUserData/ADGroupUserData/getGroupUserData" xmlns:ns1="http://www.beav.com/e1/adgroupuserdata" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+        http://fmwdvcluster.beav.com:8001/soa-infra/services/Utilities/ADGroupUserData!1.0/getGroupUserData.wsdl
+    </wsdl:documentation>
+  <plnk:partnerLinkType name="getGroupUserData">
+    <plnk:role name="getGroupUserDataProvider" portType="client:getGroupUserData"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:client="http://xmlns.oracle.com/ADGroupUserData/ADGroupUserData/getGroupUserData" xmlns:ns1="http://www.beav.com/e1/adgroupuserdata" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://www.beav.com/e1/adgroupuserdata" schemaLocation="ADGroupUserData.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getGroupUserDataRequestMessage">
+    <wsdl:part element="ns1:ADGroupUserDataRequest" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="getGroupUserDataResponseMessage">
+    <wsdl:part element="ns1:ADGroupUserDataReply" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="getGroupUserData">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:getGroupUserDataRequestMessage"/>
+      <wsdl:output message="client:getGroupUserDataResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="getGroupUserDataBinding" type="client:getGroupUserData">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation soapAction="process" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="getgroupuserdata_client_ep">
+    <wsdl:port binding="client:getGroupUserDataBinding" name="getGroupUserData_pt">
+      <soap:address location="http://fmwdvcluster.beav.com:8001/soa-infra/services/Utilities/ADGroupUserData/getgroupuserdata_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

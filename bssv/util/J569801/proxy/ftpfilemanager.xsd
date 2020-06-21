@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="process">
+        <complexType>
+            <sequence>
+                <element name="fromHost" type="string"/>
+                <element name="toHost" type="string"/>
+                <element name="fromFile" type="string"/>
+                <element name="toFile" type="string"/>
+                <element name="fromDir" type="string"/>
+                <element name="toDir" type="string"/>
+                <element name="deleteFlag" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+                <element name="compositeID" type="string"/>
+                <element name="status" type="integer"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

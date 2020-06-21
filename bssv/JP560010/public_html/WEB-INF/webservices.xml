@@ -1,0 +1,19 @@
+<webservices xmlns="http://java.sun.com/xml/ns/j2ee"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_web_services_1_1.xsd"
+             version="1.1">
+    <webservice-description>
+        <webservice-description-name>BE_NextItemNumberManagerService</webservice-description-name>
+        <wsdl-file>WEB-INF/wsdl/BE_NextItemNumberManagerService.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/BE_NextItemNumberManagerService-java-wsdl-mapping.xml</jaxrpc-mapping-file>
+        <port-component>
+            <port-component-name>BE_NextItemNumberManagerPort</port-component-name>
+            <wsdl-port xmlns:wsa0="http://be.e1.bssv.JP560010/">wsa0:BE_NextItemNumberManagerPort</wsdl-port>
+            <service-endpoint-interface>be.e1.bssv.JP560010.BE_NextItemNumberManagerPortType</service-endpoint-interface>
+            <service-impl-bean>
+                <servlet-link>BE_NextItemNumberManagerPort</servlet-link>
+            </service-impl-bean>
+        </port-component>
+    </webservice-description>
+</webservices>
+

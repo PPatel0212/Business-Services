@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wrk-flow-req_-d5602000-f><sz-process-type>O2C-W056</sz-process-type><sz-process-origin></sz-process-origin><sz-composite-id></sz-composite-id><mn-message-id negative="false" decimal-position="6" currency-decimals="0" zero="false"><currency-code></currency-code><value>161.000000</value></mn-message-id><sz-status-message>Call to web-service proxy failed</sz-status-message><CStatusFlag>1</CStatusFlag></wrk-flow-req_-d5602000-f>

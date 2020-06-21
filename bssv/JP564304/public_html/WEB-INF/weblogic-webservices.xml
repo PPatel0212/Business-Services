@@ -1,0 +1,13 @@
+<weblogic-webservices xmlns="http://www.bea.com/ns/weblogic/weblogic-webservices">
+  <webservice-description>
+    <webservice-description-name>BE_PurchaseOrderReceiverManagerService</webservice-description-name>
+    <webservice-type>JAXRPC</webservice-type>
+    <port-component>
+      <port-component-name>BE_PurchaseOrderReceiverManagerPort</port-component-name>
+      <service-endpoint-address>
+        <webservice-contextpath>context-root-JP564304</webservice-contextpath>
+        <webservice-serviceuri>/BE_PurchaseOrderReceiverManagerPort</webservice-serviceuri>
+      </service-endpoint-address>
+    </port-component>
+  </webservice-description>
+</weblogic-webservices>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="processComplianceScreening" targetNamespace="http://xmlns.oracle.com/KewillComplianceManager/ComplianceScreening/processComplianceScreening" xmlns="" xmlns:client="http://xmlns.oracle.com/KewillComplianceManager/ComplianceScreening/processComplianceScreening" xmlns:cor="http://xmlns.oracle.com/KewillComplianceManager/ComplianceScreening/processComplianceScreening/correlationset" xmlns:ns1="http://www.beav.com/kewill/compliancescreening" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+        http://fmwdvcluster.beav.com:8001/soa-infra/services/Interfaces/ComplianceScreening!1.0/processComplianceScreening.wsdl
+    </wsdl:documentation>
+  <plnk:partnerLinkType name="processComplianceScreening">
+    <plnk:role name="processComplianceScreeningProvider" portType="client:processComplianceScreening"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:client="http://xmlns.oracle.com/KewillComplianceManager/ComplianceScreening/processComplianceScreening" xmlns:cor="http://xmlns.oracle.com/KewillComplianceManager/ComplianceScreening/processComplianceScreening/correlationset" xmlns:ns1="http://www.beav.com/kewill/compliancescreening" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://www.beav.com/kewill/compliancescreening" schemaLocation="ComplianceScreeningRequest.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="processComplianceScreeningRequestMessage">
+    <wsdl:part element="ns1:CompliantScreeningRequest" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="processComplianceScreeningResponseMessage">
+    <wsdl:part element="ns1:CompiantScreeningResponse" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="processComplianceScreening">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:processComplianceScreeningRequestMessage"/>
+      <wsdl:output message="client:processComplianceScreeningResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="processComplianceScreeningBinding" type="client:processComplianceScreening">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation soapAction="process" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="processcompliancescreening_client_ep">
+    <wsdl:port binding="client:processComplianceScreeningBinding" name="processComplianceScreening_pt">
+      <soap:address location="http://fmwdvcluster.beav.com:8001/soa-infra/services/Interfaces/ComplianceScreening/processcompliancescreening_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

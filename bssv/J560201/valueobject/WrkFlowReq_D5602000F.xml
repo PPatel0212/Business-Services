@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wrk-flow-req_-d5602000-f>
+  <sz-process-origin></sz-process-origin>
+  <sz-process-type>O2C-W056</sz-process-type>
+  <O2CWRK0056Payload><![CDATA[<emailAddressCSR>eric_sahm@beaerospace.com</emailAddressCSR><emailAddressCustomer>casely_schandorf@beaerospace.com</emailAddressCustomer><emailSubject>TestingfromE1</emailSubject><emailBody/>]]></O2CWRK0056Payload>
+  <sz-composite-id></sz-composite-id>
+  <mn-message-id negative="false" decimal-position="0" currency-decimals="0"
+                 zero="true">
+    <currency-code></currency-code>
+    <value>161.000000</value>
+  </mn-message-id>
+  <sz-status-message></sz-status-message>
+  <CStatusFlag></CStatusFlag>
+</wrk-flow-req_-d5602000-f>
+
+

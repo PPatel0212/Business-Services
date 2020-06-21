@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="ProcessApprovalGateway" targetNamespace="http://xmlns.oracle.com/ApprovalGatewayManager/ApprovalGateway/ProcessApprovalGateway" xmlns="" xmlns:client="http://xmlns.oracle.com/ApprovalGatewayManager/ApprovalGateway/ProcessApprovalGateway" xmlns:ns1="http://www.beaerospace.com/ApprovalGateway" xmlns:ns2="http://schemas.oracle.com/bpel/extension" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="RuntimeFault.wsdl" namespace="http://schemas.oracle.com/bpel/extension"/>
+  <wsdl:documentation>
+        http://FMWDVVHN1:8001/soa-infra/services/WorkFlows/ApprovalGateway!1.0/ProcessApprovalGateway.wsdl
+    </wsdl:documentation>
+  <plnk:partnerLinkType name="ProcessApprovalGateway">
+    <plnk:role name="ProcessApprovalGatewayProvider" portType="client:ProcessApprovalGateway"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:client="http://xmlns.oracle.com/ApprovalGatewayManager/ApprovalGateway/ProcessApprovalGateway" xmlns:ns1="http://www.beaerospace.com/ApprovalGateway" xmlns:ns2="http://schemas.oracle.com/bpel/extension" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://www.beaerospace.com/ApprovalGateway" schemaLocation="ApprovalGateway.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessApprovalGatewayRequestMessage">
+    <wsdl:part element="ns1:ApprovalGatewayRequest" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessApprovalGatewayResponseMessage">
+    <wsdl:part element="ns1:ApprovalGatewayReply" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="ProcessApprovalGateway">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:ProcessApprovalGatewayRequestMessage"/>
+      <wsdl:output message="client:ProcessApprovalGatewayResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessApprovalGatewayBinding" type="client:ProcessApprovalGateway">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation soapAction="process" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="processapprovalgateway_client_ep">
+    <wsdl:port binding="client:ProcessApprovalGatewayBinding" name="ProcessApprovalGateway_pt">
+      <soap:address location="http://fmwdvvhn1:8001/soa-infra/services/WorkFlows/ApprovalGateway/processapprovalgateway_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

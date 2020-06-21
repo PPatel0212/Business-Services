@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="closeFedExShipment" targetNamespace="http://xmlns.oracle.com/FedExShipServices/FedExShipments/closeFedExShipment" xmlns:ns1="http://www.beav.com/be/closeshipment" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:client="http://xmlns.oracle.com/FedExShipServices/FedExShipments/closeFedExShipment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://fmwdev.beav.com:80/soa-infra/services/Utilities/FedExShipments!1.0/closeFedExShipment.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="closeFedExShipment">
+    <plnk:role name="closeFedExShipmentProvider" portType="client:closeFedExShipment"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://www.beav.com/be/closeshipment" schemaLocation="BECloseShipment.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="closeFedExShipmentRequestMessage">
+    <wsdl:part name="payload" element="ns1:CloseShipmentRequest"/>
+  </wsdl:message>
+  <wsdl:message name="closeFedExShipmentResponseMessage">
+    <wsdl:part name="payload" element="ns1:CloseShipmentReply"/>
+  </wsdl:message>
+  <wsdl:portType name="closeFedExShipment">
+    <wsdl:operation name="close">
+      <wsdl:input message="client:closeFedExShipmentRequestMessage"/>
+      <wsdl:output message="client:closeFedExShipmentResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="closeFedExShipmentBinding" type="client:closeFedExShipment">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="close">
+      <soap:operation style="document" soapAction="close"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="closefedexshipment_client_ep">
+    <wsdl:port name="closeFedExShipment_pt" binding="client:closeFedExShipmentBinding">
+      <soap:address location="http://fmwdev.beav.com:80/soa-infra/services/Utilities/FedExShipments/closefedexshipment_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

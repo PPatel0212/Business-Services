@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://www.beav.com/fmw/filelisting"
+    xmlns="http://www.beav.com/fmw/filelisting" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="FileListingRequest">
+        <xsd:annotation>
+            <xsd:documentation>A sample element</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="hostJNDI" type="xsd:string"/>
+                <xsd:element name="directory" type="xsd:string"/>
+                <xsd:element name="searchPattern" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="recursive" type="xsd:boolean"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="FileListingReply">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="statusCode" type="xsd:integer"/>
+                <xsd:element name="statusMessage" type="xsd:string"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="FileList">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="fileName" type="xsd:string"/>
+                            <xsd:element minOccurs="0"
+                                name="directoryName" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

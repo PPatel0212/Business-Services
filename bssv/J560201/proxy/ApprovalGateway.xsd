@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://www.beaerospace.com/ApprovalGateway"
+    xmlns="http://www.beaerospace.com/ApprovalGateway" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ApprovalGatewayRequest">
+        <xsd:annotation>
+            <xsd:documentation>A sample element</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="MessageId" type="xsd:int"/>
+                <xsd:element name="ProcessType" type="xsd:string"/>
+                <xsd:element name="OriginalProcess" type="xsd:string"/>
+                <xsd:element name="ProcessPayload" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ApprovalGatewayReply">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Status" type="xsd:int"/>
+                <xsd:element name="Message" type="xsd:string"/>
+                <xsd:element name="InstanceId" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

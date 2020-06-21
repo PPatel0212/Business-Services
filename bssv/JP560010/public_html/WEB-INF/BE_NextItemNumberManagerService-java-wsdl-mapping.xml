@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java-wsdl-mapping xmlns="http://java.sun.com/xml/ns/j2ee"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd"
+                   version="1.1">
+    <package-mapping>
+        <package-type>oracle.e1.bssvfoundation.base</package-type>
+        <namespaceURI>http://be.e1.bssv.JP560010/</namespaceURI>
+    </package-mapping>
+    <package-mapping>
+        <package-type>be.e1.bssv.JP560010</package-type>
+        <namespaceURI>http://be.e1.bssv.JP560010/</namespaceURI>
+    </package-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.exception.BusinessServiceException</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP560010/">typeNS:BusinessServiceException</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>message</java-variable-name>
+            <xml-element-name>message</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>requestID</java-variable-name>
+            <xml-element-name>requestID</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>be.e1.bssv.JP560010.valueobject.ShowNextItemNumber</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP560010/">typeNS:ShowNextItemNumber</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>e1MessageList</java-variable-name>
+            <xml-element-name>e1MessageList</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>itemNumberShort</java-variable-name>
+            <xml-element-name>itemNumberShort</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.util.E1MessageList</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP560010/">typeNS:E1MessageList</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>e1Messages</java-variable-name>
+            <xml-element-name>e1Messages</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.util.E1Message</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP560010/">typeNS:E1Message</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>message</java-variable-name>
+            <xml-element-name>message</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>messagePrefix</java-variable-name>
+            <xml-element-name>messagePrefix</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.base.ValueObject</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP560010/">typeNS:ValueObject</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.base.MessageValueObject</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP560010/">typeNS:MessageValueObject</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>e1MessageList</java-variable-name>
+            <xml-element-name>e1MessageList</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <exception-mapping>
+        <exception-type>oracle.e1.bssvfoundation.exception.BusinessServiceException</exception-type>
+        <wsdl-message xmlns:exMsg="http://be.e1.bssv.JP560010/">exMsg:BusinessServiceException</wsdl-message>
+        <constructor-parameter-order>
+            <element-name>message</element-name>
+            <element-name>requestID</element-name>
+        </constructor-parameter-order>
+    </exception-mapping>
+    <service-interface-mapping>
+        <service-interface>be.e1.bssv.JP560010.BE_NextItemNumberManagerService</service-interface>
+        <wsdl-service-name xmlns:serviceNS="http://be.e1.bssv.JP560010/">serviceNS:BE_NextItemNumberManagerService</wsdl-service-name>
+        <port-mapping>
+            <port-name>BE_NextItemNumberManagerPort</port-name>
+            <java-port-name>BE_NextItemNumberManagerPort</java-port-name>
+        </port-mapping>
+    </service-interface-mapping>
+    <service-endpoint-interface-mapping>
+        <service-endpoint-interface>be.e1.bssv.JP560010.BE_NextItemNumberManagerPortType</service-endpoint-interface>
+        <wsdl-port-type xmlns:portTypeNS="http://be.e1.bssv.JP560010/">portTypeNS:BE_NextItemNumberManager</wsdl-port-type>
+        <wsdl-binding xmlns:bindingNS="http://be.e1.bssv.JP560010/">bindingNS:BE_NextItemNumberManager</wsdl-binding>
+        <service-endpoint-method-mapping>
+            <java-method-name>nextItemNumberManager</java-method-name>
+            <wsdl-operation>nextItemNumberManager</wsdl-operation>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>be.e1.bssv.JP560010.valueobject.ShowNextItemNumber</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:wsdlMsgNS="http://be.e1.bssv.JP560010/">wsdlMsgNS:BE_NextItemNumberManagerPortType_nextItemNumberManager</wsdl-message>
+                    <wsdl-message-part-name>parameters</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>be.e1.bssv.JP560010.valueobject.ShowNextItemNumber</method-return-value>
+                <wsdl-message xmlns:wsdlMsgNS="http://be.e1.bssv.JP560010/">wsdlMsgNS:BE_NextItemNumberManagerPortType_nextItemNumberManagerResponse</wsdl-message>
+                <wsdl-message-part-name>return</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+    </service-endpoint-interface-mapping>
+</java-wsdl-mapping>
+

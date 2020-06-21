@@ -1,0 +1,15 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+     version="2.4">
+    <servlet>
+        <description>Web Service BE_PurchaseOrderReceiverManagerPort</description>
+        <display-name>Web Service BE_PurchaseOrderReceiverManagerPort</display-name>
+        <servlet-name>BE_PurchaseOrderReceiverManagerPort</servlet-name>
+        <servlet-class>be.e1.bssv.JP564304.BE_PurchaseOrderReceiverManager</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BE_PurchaseOrderReceiverManagerPort</servlet-name>
+        <url-pattern>/BE_PurchaseOrderReceiverManagerPort</url-pattern>
+    </servlet-mapping>
+</web-app>

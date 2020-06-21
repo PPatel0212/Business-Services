@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item-bOM_-d563000-a>
+  <sz-change-number></sz-change-number>
+  <CBssvError></CBssvError>
+  <mn-txn-id negative="false" decimal-position="0" currency-decimals="0" zero="true">
+    <currency-code></currency-code>
+    <value>0</value>
+  </mn-txn-id>
+  <mn-error-count negative="false" decimal-position="0" currency-decimals="0" zero="true">
+    <currency-code></currency-code>
+    <value>0</value>
+  </mn-error-count>
+  <sz-site-id></sz-site-id>
+  <sz-txn-type></sz-txn-type>
+  <sz-plm-system></sz-plm-system>
+  <sz-bssv-error-msg></sz-bssv-error-msg>
+  <error-messages>
+    <sz-msg-key></sz-msg-key>
+    <sz-msg-data></sz-msg-data>
+  </error-messages>
+  <error-messages>
+    <sz-msg-key></sz-msg-key>
+    <sz-msg-data></sz-msg-data>
+  </error-messages>
+</item-bOM_-d563000-a>

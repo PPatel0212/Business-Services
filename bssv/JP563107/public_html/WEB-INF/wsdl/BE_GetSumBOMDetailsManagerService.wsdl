@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+     name="BE_GetSumBOMDetailsManagerService"
+     targetNamespace="http://be.e1.bssv.JP563107/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://be.e1.bssv.JP563107/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+                  xmlns:conv="http://www.openuri.org/2002/04/wsdl/conversation/">
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://be.e1.bssv.JP563107/"
+             elementFormDefault="qualified" xmlns:tns="http://be.e1.bssv.JP563107/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/">
+            <complexType name="BusinessServiceException">
+                <sequence>
+                    <element name="message" type="string" nillable="true"/>
+                    <element name="requestID" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="MOInfo">
+                <sequence>
+                    <element name="MUpdateDate" type="string" nillable="true"/>
+                    <element name="moSeqNo" type="int"/>
+                    <element name="szFileName" type="string" nillable="true"/>
+                    <element name="szMoKey" type="string" nillable="true"/>
+                    <element name="MUpdateTimeStamp" type="int"/>
+                    <element name="szItemName" type="string" nillable="true"/>
+                    <element name="szMoName" type="string" nillable="true"/>
+                    <element name="MUpdateUserID" type="string" nillable="true"/>
+                    <element name="szQName" type="string" nillable="true"/>
+                    <element name="szData" type="anyType" nillable="true"/>
+                    <element name="szMoType" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getSumBOMDetails" type="tns:GetSumBOMDetails" nillable="true"/>
+            <complexType name="GetSumBOMDetails">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="productionNumber" type="string" nillable="true"/>
+                            <element name="orderType" type="string" nillable="true"/>
+                            <element name="costCenter" type="string" nillable="true"/>
+                            <element name="documentOrderInvoiceE" type="int" nillable="true"/>
+                            <element name="identifier2ndItem" type="string" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="ValueObject">
+                <sequence/>
+            </complexType>
+            <complexType name="WorkOrderDetails">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="serialNumber1" type="string" nillable="true"/>
+                            <element name="woOrderNo" type="int" nillable="true"/>
+                            <element name="woOrderType" type="string" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="SumBOMDetails">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="salesOrderNo" type="int" nillable="true"/>
+                            <element name="productionNumber" type="string" nillable="true"/>
+                            <element name="orderType" type="string" nillable="true"/>
+                            <element name="costCenter" type="string" nillable="true"/>
+                            <element name="bomQty" type="decimal" nillable="true"/>
+                            <element name="descriptionLine1" type="string" nillable="true"/>
+                            <element name="workOrderDetails" type="tns:WorkOrderDetails" nillable="true"
+                                 minOccurs="0" maxOccurs="unbounded"/>
+                            <element name="meRevisionLevel" type="string" nillable="true"/>
+                            <element name="parentItemNo" type="string" nillable="true"/>
+                            <element name="childItemNo" type="string" nillable="true"/>
+                            <element name="stockingType" type="string" nillable="true"/>
+                            <element name="salesOrderItemNo" type="string" nillable="true"/>
+                            <element name="childShortItemNo" type="int" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="MessageValueObject">
+                <complexContent>
+                    <extension base="tns:ValueObject">
+                        <sequence>
+                            <element name="e1MessageList" type="tns:E1MessageList" nillable="true"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="E1MessageList">
+                <sequence>
+                    <element name="e1Messages" type="tns:E1Message" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="E1Message">
+                <sequence>
+                    <element name="message" type="string" nillable="true"/>
+                    <element name="messagePrefix" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ShowSumBOMDetails">
+                <complexContent>
+                    <extension base="tns:MessageValueObject">
+                        <sequence>
+                            <element name="sumBOMDetails" type="tns:SumBOMDetails" nillable="true" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="getSumBOMDetailsResponse" type="tns:ShowSumBOMDetails" nillable="true"/>
+            <element name="BusinessServiceExceptionElement" type="tns:BusinessServiceException"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="BE_GetSumBOMDetailsManagerPortType_getSumBOMDetails">
+        <wsdl:part name="parameters" element="tns:getSumBOMDetails"/>
+    </wsdl:message>
+    <wsdl:message name="BE_GetSumBOMDetailsManagerPortType_getSumBOMDetailsResponse">
+        <wsdl:part name="return" element="tns:getSumBOMDetailsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessServiceException">
+        <wsdl:part name="BusinessServiceExceptionElement" element="tns:BusinessServiceExceptionElement"/>
+    </wsdl:message>
+    <wsdl:portType name="BE_GetSumBOMDetailsManager">
+        <wsdl:operation name="getSumBOMDetails">
+            <wsdl:input message="tns:BE_GetSumBOMDetailsManagerPortType_getSumBOMDetails"/>
+            <wsdl:output message="tns:BE_GetSumBOMDetailsManagerPortType_getSumBOMDetailsResponse"/>
+            <wsdl:fault name="BusinessServiceException" message="tns:BusinessServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BE_GetSumBOMDetailsManager" type="tns:BE_GetSumBOMDetailsManager">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getSumBOMDetails">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="return"/>
+            </wsdl:output>
+            <wsdl:fault name="BusinessServiceException">
+                <soap:fault name="BusinessServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="BE_GetSumBOMDetailsManagerService">
+        <wsdl:port name="BE_GetSumBOMDetailsManagerPort" binding="tns:BE_GetSumBOMDetailsManager">
+            <soap:address location="http://localhost:7101/context-root-JP563107/BE_GetSumBOMDetailsManagerPort"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

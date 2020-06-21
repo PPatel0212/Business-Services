@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java-wsdl-mapping xmlns="http://java.sun.com/xml/ns/j2ee"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd"
+                   version="1.1">
+    <package-mapping>
+        <package-type>oracle.e1.bssvfoundation.base</package-type>
+        <namespaceURI>http://be.e1.bssv.JP564304/</namespaceURI>
+    </package-mapping>
+    <package-mapping>
+        <package-type>be.e1.bssv.JP564304</package-type>
+        <namespaceURI>http://be.e1.bssv.JP564304/</namespaceURI>
+    </package-mapping>
+    <java-xml-type-mapping>
+        <java-type>be.e1.bssv.JP564304.valueobject.ShowF43121</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP564304/">typeNS:ShowF43121</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>found</java-variable-name>
+            <xml-element-name>found</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>be.e1.bssv.JP564304.valueobject.GetF43121</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP564304/">typeNS:GetF43121</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>companyKeyOrderNo</java-variable-name>
+            <xml-element-name>companyKeyOrderNo</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>orderType</java-variable-name>
+            <xml-element-name>orderType</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>matchType</java-variable-name>
+            <xml-element-name>matchType</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>lineNumber</java-variable-name>
+            <xml-element-name>lineNumber</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>documentOrderInvoiceE</java-variable-name>
+            <xml-element-name>documentOrderInvoiceE</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.base.MOInfo</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP564304/">typeNS:MOInfo</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>MUpdateDate</java-variable-name>
+            <xml-element-name>MUpdateDate</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>moSeqNo</java-variable-name>
+            <xml-element-name>moSeqNo</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szFileName</java-variable-name>
+            <xml-element-name>szFileName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szMoKey</java-variable-name>
+            <xml-element-name>szMoKey</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>MUpdateTimeStamp</java-variable-name>
+            <xml-element-name>MUpdateTimeStamp</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szItemName</java-variable-name>
+            <xml-element-name>szItemName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szMoName</java-variable-name>
+            <xml-element-name>szMoName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>MUpdateUserID</java-variable-name>
+            <xml-element-name>MUpdateUserID</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szQName</java-variable-name>
+            <xml-element-name>szQName</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szData</java-variable-name>
+            <xml-element-name>szData</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>szMoType</java-variable-name>
+            <xml-element-name>szMoType</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.exception.BusinessServiceException</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP564304/">typeNS:BusinessServiceException</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+        <variable-mapping>
+            <java-variable-name>message</java-variable-name>
+            <xml-element-name>message</xml-element-name>
+        </variable-mapping>
+        <variable-mapping>
+            <java-variable-name>requestID</java-variable-name>
+            <xml-element-name>requestID</xml-element-name>
+        </variable-mapping>
+    </java-xml-type-mapping>
+    <java-xml-type-mapping>
+        <java-type>oracle.e1.bssvfoundation.base.ValueObject</java-type>
+        <root-type-qname xmlns:typeNS="http://be.e1.bssv.JP564304/">typeNS:ValueObject</root-type-qname>
+        <qname-scope>complexType</qname-scope>
+    </java-xml-type-mapping>
+    <exception-mapping>
+        <exception-type>oracle.e1.bssvfoundation.exception.BusinessServiceException</exception-type>
+        <wsdl-message xmlns:exMsg="http://be.e1.bssv.JP564304/">exMsg:BusinessServiceException</wsdl-message>
+        <constructor-parameter-order>
+            <element-name>message</element-name>
+            <element-name>requestID</element-name>
+        </constructor-parameter-order>
+    </exception-mapping>
+    <service-interface-mapping>
+        <service-interface>be.e1.bssv.JP564304.BE_PurchaseOrderReceiverManagerService</service-interface>
+        <wsdl-service-name xmlns:serviceNS="http://be.e1.bssv.JP564304/">serviceNS:BE_PurchaseOrderReceiverManagerService</wsdl-service-name>
+        <port-mapping>
+            <port-name>BE_PurchaseOrderReceiverManagerPort</port-name>
+            <java-port-name>BE_PurchaseOrderReceiverManagerPort</java-port-name>
+        </port-mapping>
+    </service-interface-mapping>
+    <service-endpoint-interface-mapping>
+        <service-endpoint-interface>be.e1.bssv.JP564304.BE_PurchaseOrderReceiverManagerPortType</service-endpoint-interface>
+        <wsdl-port-type xmlns:portTypeNS="http://be.e1.bssv.JP564304/">portTypeNS:BE_PurchaseOrderReceiverManager</wsdl-port-type>
+        <wsdl-binding xmlns:bindingNS="http://be.e1.bssv.JP564304/">bindingNS:BE_PurchaseOrderReceiverManager</wsdl-binding>
+        <service-endpoint-method-mapping>
+            <java-method-name>getPurchaseOrderReceiver</java-method-name>
+            <wsdl-operation>getPurchaseOrderReceiver</wsdl-operation>
+            <method-param-parts-mapping>
+                <param-position>0</param-position>
+                <param-type>be.e1.bssv.JP564304.valueobject.GetF43121</param-type>
+                <wsdl-message-mapping>
+                    <wsdl-message xmlns:wsdlMsgNS="http://be.e1.bssv.JP564304/">wsdlMsgNS:BE_PurchaseOrderReceiverManagerPortType_getPurchaseOrderReceiver</wsdl-message>
+                    <wsdl-message-part-name>parameters</wsdl-message-part-name>
+                    <parameter-mode>IN</parameter-mode>
+                </wsdl-message-mapping>
+            </method-param-parts-mapping>
+            <wsdl-return-value-mapping>
+                <method-return-value>be.e1.bssv.JP564304.valueobject.ShowF43121</method-return-value>
+                <wsdl-message xmlns:wsdlMsgNS="http://be.e1.bssv.JP564304/">wsdlMsgNS:BE_PurchaseOrderReceiverManagerPortType_getPurchaseOrderReceiverResponse</wsdl-message>
+                <wsdl-message-part-name>return</wsdl-message-part-name>
+            </wsdl-return-value-mapping>
+        </service-endpoint-method-mapping>
+    </service-endpoint-interface-mapping>
+</java-wsdl-mapping>
+

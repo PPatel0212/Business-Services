@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="ProcessFTPFiles" targetNamespace="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles" xmlns="" xmlns:client="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles" xmlns:ns1="http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager" xmlns:ns2="http://schemas.oracle.com/bpel/extension" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import location="RuntimeFault.wsdl" namespace="http://schemas.oracle.com/bpel/extension"/>
+  <wsdl:documentation>
+        http://FMWDVVHN1:8001/soa-infra/services/Utilities/FTPManager!1.0/ProcessFTPFiles.wsdl
+    </wsdl:documentation>
+  <plnk:partnerLinkType name="ProcessFTPFiles">
+    <plnk:role name="ProcessFTPFilesProvider" portType="client:ProcessFTPFiles"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:client="http://xmlns.oracle.com/FTPManager/FTPManager/ProcessFTPFiles" xmlns:ns1="http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager" xmlns:ns2="http://schemas.oracle.com/bpel/extension" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://xmlns.oracle.com/FTPManager/FTPManager/FTPFileManager" schemaLocation="ftpfilemanager.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessFTPFilesRequestMessage">
+    <wsdl:part element="ns1:process" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="ProcessFTPFilesResponseMessage">
+    <wsdl:part element="ns1:processResponse" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="ProcessFTPFiles">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:ProcessFTPFilesRequestMessage"/>
+      <wsdl:output message="client:ProcessFTPFilesResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessFTPFilesBinding" type="client:ProcessFTPFiles">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation soapAction="process" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="processftpfiles_client_ep">
+    <wsdl:port binding="client:ProcessFTPFilesBinding" name="ProcessFTPFiles_pt">
+      <soap:address location="http://fmwdvvhn1:8001/soa-infra/services/Utilities/FTPManager/processftpfiles_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

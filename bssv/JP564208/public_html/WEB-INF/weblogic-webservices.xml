@@ -1,0 +1,13 @@
+<weblogic-webservices xmlns="http://www.bea.com/ns/weblogic/weblogic-webservices">
+  <webservice-description>
+    <webservice-description-name>BE_TSOSalesOrderDetailLineManagerService</webservice-description-name>
+    <webservice-type>JAXRPC</webservice-type>
+    <port-component>
+      <port-component-name>BE_TSOSalesOrderDetailLineManagerPort</port-component-name>
+      <service-endpoint-address>
+        <webservice-contextpath>context-root-JP564208</webservice-contextpath>
+        <webservice-serviceuri>/BE_TSOSalesOrderDetailLineManagerPort</webservice-serviceuri>
+      </service-endpoint-address>
+    </port-component>
+  </webservice-description>
+</weblogic-webservices>

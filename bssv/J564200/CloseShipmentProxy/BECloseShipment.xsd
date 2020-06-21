@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.beav.com/be/closeshipment" targetNamespace="http://www.beav.com/be/closeshipment" elementFormDefault="qualified">
+  <xsd:element name="CloseShipmentRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="WebAuthenticationDetail" minOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="UserCredential" minOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Key" type="xsd:string" minOccurs="1"/>
+                    <xsd:element name="Password" type="xsd:string" minOccurs="1"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="ClientDetail">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AccountNumber" type="xsd:string"/>
+              <xsd:element name="MeterNumber" type="xsd:string"/>
+              <xsd:element name="IntegratorId" type="xsd:string"/>
+              <xsd:element name="Localization">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="LanguageCode" type="xsd:string"/>
+                    <xsd:element name="LocaleCode" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="TransactionDetail">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CustomerTransactionId" type="xsd:string"/>
+              <xsd:element name="Localization">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="LanguageCode" type="xsd:string"/>
+                    <xsd:element name="LocaleCode" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Version">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ServiceId" type="xsd:string"/>
+              <xsd:element name="Major" type="xsd:string"/>
+              <xsd:element name="Intermediate" type="xsd:string"/>
+              <xsd:element name="Minor" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="TimeShipmentClosed" type="xsd:dateTime"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CloseShipmentReply">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="HighestSeverity" type="xsd:string"/>
+        <xsd:element name="Notifications">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Severity" type="xsd:string"/>
+              <xsd:element name="Source" type="xsd:string"/>
+              <xsd:element name="Code" type="xsd:integer"/>
+              <xsd:element name="Message" type="xsd:string"/>
+              <xsd:element name="LocalizedMessage" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="TransactionDetail">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CustomerTransactionId" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="wsa" type="xsd:string"/>
+            <xsd:attribute name="ns" type="xsd:string"/>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Version">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="ServiceId" type="xsd:string"/>
+              <xsd:element name="Major" type="xsd:integer"/>
+              <xsd:element name="Intermediate" type="xsd:integer"/>
+              <xsd:element name="Minor" type="xsd:integer"/>
+            </xsd:sequence>
+            <xsd:attribute name="wsa" type="xsd:string"/>
+            <xsd:attribute name="ns" type="xsd:string"/>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Status">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Code" type="xsd:integer"/>
+              <xsd:element name="Message" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="GroundCloseReply">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CodReport" type="xsd:string"/>
+              <xsd:element name="HazMatCertificate" type="xsd:string"/>
+              <xsd:element name="Manifest">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Filename" type="xsd:string"/>
+                    <xsd:element name="File" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="MultiweightReport" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

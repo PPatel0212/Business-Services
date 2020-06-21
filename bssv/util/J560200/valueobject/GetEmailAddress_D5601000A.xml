@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<get-email-address_-d5601000-a>
+  <mn-address-number negative="false" decimal-position="0" currency-decimals="0" zero="true">
+    <currency-code></currency-code>
+    <value></value>
+  </mn-address-number>
+  <sz-address-search-type>NAME</sz-address-search-type>
+  <sz-address-branch></sz-address-branch>
+  <CAddressTypeCode></CAddressTypeCode>
+  <sz-address-function-code></sz-address-function-code>
+  <sz-parameter03></sz-parameter03>
+  <CCharacterParm></CCharacterParm>
+  <sz-parameter02></sz-parameter02>
+  <sz-parameter01>Barry Dover</sz-parameter01>
+  <sz-email-address-list></sz-email-address-list>
+  <sz-error-description></sz-error-description>
+  <CErrorFlag></CErrorFlag>
+  <mn-num-parm02 negative="false" decimal-position="0" currency-decimals="0"
+                 zero="true">
+    <currency-code></currency-code>
+    <value>0</value>
+  </mn-num-parm02>
+  <mn-num-parm01 negative="false" decimal-position="0" currency-decimals="0"
+                 zero="true">
+    <currency-code></currency-code>
+    <value>0</value>
+  </mn-num-parm01>
+</get-email-address_-d5601000-a>

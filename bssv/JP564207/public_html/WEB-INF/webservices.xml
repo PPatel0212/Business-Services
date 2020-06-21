@@ -1,0 +1,19 @@
+<webservices xmlns="http://java.sun.com/xml/ns/j2ee"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_web_services_1_1.xsd"
+             version="1.1">
+    <webservice-description>
+        <webservice-description-name>BE_SalesOrderHeaderService</webservice-description-name>
+        <wsdl-file>WEB-INF/wsdl/BE_SalesOrderHeaderService.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/BE_SalesOrderHeaderService-java-wsdl-mapping.xml</jaxrpc-mapping-file>
+        <port-component>
+            <port-component-name>BE_SalesOrderHeaderPort</port-component-name>
+            <wsdl-port xmlns:wsa0="http://be.e1.bssv.JP564207/">wsa0:BE_SalesOrderHeaderPort</wsdl-port>
+            <service-endpoint-interface>be.e1.bssv.JP564207.BE_SalesOrderHeaderPortType</service-endpoint-interface>
+            <service-impl-bean>
+                <servlet-link>BE_SalesOrderHeaderPort</servlet-link>
+            </service-impl-bean>
+        </port-component>
+    </webservice-description>
+</webservices>
+

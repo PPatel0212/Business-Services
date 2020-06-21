@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ftp-request>
+  <sz-error-message></sz-error-message>
+  <sz-source-file></sz-source-file>
+  <CDeleteSourceYN></CDeleteSourceYN>
+  <sz-destination-host></sz-destination-host>
+  <sz-destination-path></sz-destination-path>
+  <sz-source-host></sz-source-host>
+  <CErrorFlag></CErrorFlag>
+  <sz-source-path></sz-source-path>
+  <sz-destination-file></sz-destination-file>
+</ftp-request>

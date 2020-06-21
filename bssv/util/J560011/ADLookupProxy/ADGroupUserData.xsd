@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://www.beav.com/e1/adgroupuserdata"
+    xmlns="http://www.beav.com/e1/adgroupuserdata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ADGroupUserDataRequest">
+        <xsd:annotation>
+            <xsd:documentation>A sample element</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="groupName" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ADGroupUserDataReply">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserData">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="userId" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="fullName" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="firstName" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="lastName" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="email" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="statusCode" type="xsd:integer"/>
+                <xsd:element name="statusMessage" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

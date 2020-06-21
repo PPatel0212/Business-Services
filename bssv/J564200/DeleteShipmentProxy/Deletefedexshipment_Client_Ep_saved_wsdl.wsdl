@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="deleteFedExShipment" targetNamespace="http://xmlns.oracle.com/FedExShipServices/FedExShipments/deleteFedExShipment" xmlns="" xmlns:client="http://xmlns.oracle.com/FedExShipServices/FedExShipments/deleteFedExShipment" xmlns:ns1="http://www.beone.com/fedex/beshipments" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+        http://fmwdvcluster.beav.com:8001/soa-infra/services/Utilities/FedExShipments!1.1/deleteFedExShipment.wsdl
+    </wsdl:documentation>
+  <plnk:partnerLinkType name="deleteFedExShipment">
+    <plnk:role name="deleteFedExShipmentProvider" portType="client:deleteFedExShipment"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:client="http://xmlns.oracle.com/FedExShipServices/FedExShipments/deleteFedExShipment" xmlns:ns1="http://www.beone.com/fedex/beshipments" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <import namespace="http://www.beone.com/fedex/beshipments" schemaLocation="BEONE_Shipments_v13.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="deleteFedExShipmentRequestMessage">
+    <wsdl:part element="ns1:DeleteShipmentRequest" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="deleteFedExShipmentResponseMessage">
+    <wsdl:part element="ns1:ShipmentReply" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="deleteFedExShipment">
+    <wsdl:operation name="delete">
+      <wsdl:input message="client:deleteFedExShipmentRequestMessage"/>
+      <wsdl:output message="client:deleteFedExShipmentResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="deleteFedExShipmentBinding" type="client:deleteFedExShipment">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="delete" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="deletefedexshipment_client_ep">
+    <wsdl:port binding="client:deleteFedExShipmentBinding" name="deleteFedExShipment_pt">
+      <soap:address location="http://fmwdvcluster.beav.com:8001/soa-infra/services/Utilities/FedExShipments/deletefedexshipment_client_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

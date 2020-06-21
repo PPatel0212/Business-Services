@@ -1,0 +1,15 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+     version="2.4">
+    <servlet>
+        <description>Web Service BE_ECMDocumentIDInformationManagerPort</description>
+        <display-name>Web Service BE_ECMDocumentIDInformationManagerPort</display-name>
+        <servlet-name>BE_ECMDocumentIDInformationManagerPort</servlet-name>
+        <servlet-class>be.e1.bssv.JP560001.BE_ECMDocumentIDInformationManager</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BE_ECMDocumentIDInformationManagerPort</servlet-name>
+        <url-pattern>/BE_ECMDocumentIDInformationManagerPort</url-pattern>
+    </servlet-mapping>
+</web-app>
