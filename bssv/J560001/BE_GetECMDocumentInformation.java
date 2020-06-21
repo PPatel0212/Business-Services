@@ -27,6 +27,7 @@ import oracle.e1.bssvfoundation.util.E1Message;
 import oracle.e1.bssvfoundation.util.E1MessageList;
 
 /**
+Internal web service
  * TODO: Java Doc for BusinessService
  */
 public abstract class BE_GetECMDocumentInformation extends BusinessService {
