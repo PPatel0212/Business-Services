@@ -1,3 +1,3 @@
 # Business-Services
 BSSV
-Business Services created 
+Business Services Java for JDE integrations
